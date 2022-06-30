@@ -127,7 +127,7 @@ export const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
 					const { color: _, ...rootProps } = getRootProps();
 
 					return (
-						<Stack gap={0.5} {...rootProps}>
+						<Stack gap={1} {...rootProps}>
 							<Flex
 								gap={1}
 								padding={1.5}
@@ -175,33 +175,35 @@ export const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
 									{`Select ${filesPlural}`}
 								</Button>
 							</Flex>
-							{value?.length ? (
-								<Fragment>
-									<Text color="muted">{getFilesTotal(value)}</Text>
+							<Stack gap={0.5}>
+								{value?.length ? (
+									<Fragment>
+										<Text color="muted">{getFilesTotal(value)}</Text>
+										<Stack as="ul" gap={0.5}>
+											{value.map((file, index) => (
+												<FileUploadFile
+													file={file}
+													key={index}
+													onRemove={() => handleRemoveFile(file)}
+												/>
+											))}
+										</Stack>
+									</Fragment>
+								) : null}
+								{fileRejections.length ? (
 									<Stack as="ul" gap={0.5}>
-										{value.map((file, index) => (
-											<FileUploadFile
-												file={file}
-												key={index}
-												onRemove={() => handleRemoveFile(file)}
-											/>
+										{fileRejections.map((err, index) => (
+											<FileRejection key={index}>
+												{getFileRejectionErrorMessage(
+													err,
+													formattedMaxFileSize,
+													acceptedFilesSummary
+												)}
+											</FileRejection>
 										))}
 									</Stack>
-								</Fragment>
-							) : null}
-							{fileRejections.length ? (
-								<Stack as="ul" gap={0.5}>
-									{fileRejections.map((err, index) => (
-										<FileRejection key={index}>
-											{getFileRejectionErrorMessage(
-												err,
-												formattedMaxFileSize,
-												acceptedFilesSummary
-											)}
-										</FileRejection>
-									))}
-								</Stack>
-							) : null}{' '}
+								) : null}
+							</Stack>
 						</Stack>
 					);
 				}}
