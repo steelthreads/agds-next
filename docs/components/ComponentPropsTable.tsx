@@ -45,27 +45,24 @@ export const ComponentPropsTable = ({ data }: ComponentPropsTableProps) => (
 				return (
 					<tr key={prop.name}>
 						<TableCell>
-							{prop.name}
-							{prop.required ? '' : '?'}
-						</TableCell>
-						<TableCell>
-							{prop.type.name}
-							{prop.defaultValue?.value ? (
-								<span css={{ display: 'block' }}>
-									<strong>Default: </strong>
-									{JSON.stringify(prop.defaultValue.value)}
-								</span>
-							) : null}
-						</TableCell>
-						<TableCell>
-							<span
-								css={{
-									wordBreak: 'break-word',
-									wordWrap: 'break-word',
-								}}
-							>
-								{prop.description}
+							<span css={{ wordBreak: 'break-word' }}>
+								{prop.name}
+								{prop.required ? '' : '?'}
 							</span>
+						</TableCell>
+						<TableCell>
+							<span css={{ wordBreak: 'break-word' }}>
+								{prop.type.name}
+								{prop.defaultValue?.value ? (
+									<span css={{ display: 'block' }}>
+										<strong>Default: </strong>
+										{JSON.stringify(prop.defaultValue.value)}
+									</span>
+								) : null}
+							</span>
+						</TableCell>
+						<TableCell>
+							<span css={{ wordBreak: 'break-word' }}>{prop.description}</span>
 						</TableCell>
 					</tr>
 				);
