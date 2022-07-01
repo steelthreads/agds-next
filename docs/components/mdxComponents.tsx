@@ -34,7 +34,14 @@ export const mdxComponents: Record<string, any> = {
 		);
 	},
 	ComponentPropsTable: ({ name }: { name: string }) => {
-		if (!(name in generatedComponentPropsData)) return null;
+		if (!(name in generatedComponentPropsData)) {
+			return (
+				<Fragment>
+					<h3>{name} Props</h3>
+					<p>{name} does not have any props.</p>
+				</Fragment>
+			);
+		}
 		return (
 			<ComponentPropsTable
 				data={
