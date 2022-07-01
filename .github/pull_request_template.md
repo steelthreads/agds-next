@@ -14,6 +14,7 @@ Include screenshots, photos or links if necessary.
 
 For new components...
 
+- [ ] Version number in package.json is set to 0.0.1
 - [ ] Create changelog file (packages/component/CHANGELOG.md)
 - [ ] Add components to Playroom (docs/playroom/components.js)
 - [ ] Add snippets to Playroom (docs/playroom/snippets.js)
