@@ -55,7 +55,7 @@ export async function getPkgSubNavItems(slug: string) {
 			{
 				label: 'Rationale',
 				href: `/packages/${meta.group}/${meta.slug}/rationale`,
-				path: pkgReadmePath(slug),
+				path: `${pkgDocsPath(slug)}/rationale.mdx`,
 			},
 			{
 				label: 'Content',
