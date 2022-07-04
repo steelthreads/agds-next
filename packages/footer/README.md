@@ -63,22 +63,12 @@ The footer at the bottom of a page. Usually contains copyright information and l
 	</Columns>
 	<FooterDivider />
 	<Text as="p">Footer text</Text>
-
 	<Box maxWidth="240px">
 		<Logo />
 	</Box>
-
 	<FooterDivider />
-	<Text>
-		<small>
-			&copy; Commonwealth of Australia,{' '}
-			<TextLink
-				href="https://github.com/govau/design-system-components/blob/master/LICENSE.md"
-				rel="external license"
-			>
-				MIT licensed
-			</TextLink>
-		</small>
+	<Text fontSize="xs" maxWidth={tokens.maxWidth.bodyText}>
+		&copy; 2022 Department of Agriculture, Fisheries and Forestry
 	</Text>
 </Footer>
 ```
@@ -87,22 +77,24 @@ The footer at the bottom of a page. Usually contains copyright information and l
 
 ```jsx live
 <Footer variant="agriculture">
-	<LinkList
-		links={[
-			{ href: '#1', label: 'Accessibility' },
-			{ href: '#2', label: 'Disclaimer' },
-			{ href: '#3', label: 'Privacy' },
-		]}
-		horizontal
-	/>
+	<nav aria-label="footer">
+		<LinkList
+			links={[
+				{ href: '#1', label: 'Accessibility' },
+				{ href: '#2', label: 'Disclaimer' },
+				{ href: '#3', label: 'Privacy' },
+			]}
+			horizontal
+		/>
+	</nav>
 	<FooterDivider />
-
-	<Text fontSize="xs" maxWidth="42em">
+	<Text fontSize="xs" maxWidth={tokens.maxWidth.bodyText}>
 		We acknowledge the traditional owners of country throughout Australia and
 		recognise their continuing connection to land, waters and culture. We pay
 		our respects to their Elders past, present and emerging.
 	</Text>
-
-	<Text fontSize="xs">&copy; Commonwealth of Australia.</Text>
+	<Text fontSize="xs" maxWidth={tokens.maxWidth.bodyText}>
+		&copy; 2022 Department of Agriculture, Fisheries and Forestry
+	</Text>
 </Footer>
 ```

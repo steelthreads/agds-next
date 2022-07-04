@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import { Footer, FooterDivider } from '@ag.ds-next/footer';
 import { Text } from '@ag.ds-next/text';
 import { LinkList } from '@ag.ds-next/link-list';
@@ -20,6 +21,7 @@ const footerLinks = [
 ];
 
 export const SiteFooter = () => {
+	const year = useMemo(() => new Date().getFullYear(), []);
 	return (
 		<Footer variant="agriculture">
 			<nav aria-label="footer">
@@ -32,7 +34,7 @@ export const SiteFooter = () => {
 				We pay our respects to their Elders past, present and emerging.
 			</Text>
 			<Text fontSize="xs" maxWidth={tokens.maxWidth.bodyText}>
-				&copy; Commonwealth of Australia.
+				&copy; {year} Department of Agriculture, Fisheries and Forestry
 			</Text>
 		</Footer>
 	);

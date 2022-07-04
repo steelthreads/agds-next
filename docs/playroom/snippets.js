@@ -58,16 +58,12 @@ const snippets = [
       />
     </nav>
     <FooterDivider />
-    <Text>
-      <small>
-        &copy; Commonwealth of Australia,{' '}
-        <TextLink
-          href="https://github.com/govau/design-system-components/blob/master/LICENSE.md"
-          rel="external license"
-        >
-          MIT licensed
-        </TextLink>
-      </small>
+    <Text fontSize="xs" maxWidth={tokens.maxWidth.bodyText}>
+      We acknowledge the traditional owners of country throughout Australia and recognise their continuing connection to land, waters and culture. 
+      We pay our respects to their Elders past, present and emerging.
+    </Text>
+    <Text fontSize="xs" maxWidth={tokens.maxWidth.bodyText}>
+      &copy; 2022 Department of Agriculture, Fisheries and Forestry
     </Text>
   </Footer>`,
 	},
@@ -133,10 +129,12 @@ const snippets = [
       <Logo />
     </Box>
     <FooterDivider />
-    <Text>
-      <small>
-        &copy; Commonwealth of Australia
-      </small>
+    <Text fontSize="xs" maxWidth={tokens.maxWidth.bodyText}>
+      We acknowledge the traditional owners of country throughout Australia and recognise their continuing connection to land, waters and culture. 
+      We pay our respects to their Elders past, present and emerging.
+    </Text>
+    <Text fontSize="xs" maxWidth={tokens.maxWidth.bodyText}>
+      &copy; 2022 Department of Agriculture, Fisheries and Forestry
     </Text>
   </Footer>
   `,

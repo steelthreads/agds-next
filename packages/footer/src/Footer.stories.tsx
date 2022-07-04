@@ -1,15 +1,13 @@
-/* eslint-disable @next/next/no-img-element */
-
+import { useMemo } from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { tokens } from '@ag.ds-next/core';
 import { Logo } from '@ag.ds-next/ag-branding';
 import { Box, Stack } from '@ag.ds-next/box';
 import { Columns, Column } from '@ag.ds-next/columns';
 import { H3 } from '@ag.ds-next/heading';
 import { Text } from '@ag.ds-next/text';
-import { TextLink } from '@ag.ds-next/text-link';
 import { LinkList } from '@ag.ds-next/link-list';
-import { Footer } from './Footer';
-import { FooterDivider } from '.';
+import { Footer, FooterDivider } from './';
 
 export default {
 	title: 'layout/Footer',
@@ -17,6 +15,7 @@ export default {
 } as ComponentMeta<typeof Footer>;
 
 const AgSimpleFooter: ComponentStory<typeof Footer> = (args) => {
+	const year = useMemo(() => new Date().getFullYear(), []);
 	return (
 		<Footer variant={args.variant}>
 			<nav aria-label="footer">
@@ -31,16 +30,13 @@ const AgSimpleFooter: ComponentStory<typeof Footer> = (args) => {
 				/>
 			</nav>
 			<FooterDivider />
-			<Text>
-				<small>
-					&copy; Commonwealth of Australia,{' '}
-					<TextLink
-						href="https://github.com/govau/design-system-components/blob/master/LICENSE.md"
-						rel="external license"
-					>
-						MIT licensed
-					</TextLink>
-				</small>
+			<Text fontSize="xs" maxWidth={tokens.maxWidth.bodyText}>
+				We acknowledge the traditional owners of country throughout Australia
+				and recognise their continuing connection to land, waters and culture.
+				We pay our respects to their Elders past, present and emerging.
+			</Text>
+			<Text fontSize="xs" maxWidth={tokens.maxWidth.bodyText}>
+				&copy; {year} Department of Agriculture, Fisheries and Forestry
 			</Text>
 		</Footer>
 	);
@@ -71,6 +67,7 @@ DarkAltVariant.args = {
 };
 
 const AgComplexFooter: ComponentStory<typeof Footer> = (args) => {
+	const year = useMemo(() => new Date().getFullYear(), []);
 	const columnSpanning = { xs: 12, sm: 6, lg: 3 } as const;
 	return (
 		<Footer variant={args.variant}>
@@ -132,16 +129,13 @@ const AgComplexFooter: ComponentStory<typeof Footer> = (args) => {
 				<Logo />
 			</Box>
 			<FooterDivider />
-			<Text>
-				<small>
-					&copy; Commonwealth of Australia,{' '}
-					<TextLink
-						href="https://github.com/govau/design-system-components/blob/master/LICENSE.md"
-						rel="external license"
-					>
-						MIT licensed
-					</TextLink>
-				</small>
+			<Text fontSize="xs" maxWidth={tokens.maxWidth.bodyText}>
+				We acknowledge the traditional owners of country throughout Australia
+				and recognise their continuing connection to land, waters and culture.
+				We pay our respects to their Elders past, present and emerging.
+			</Text>
+			<Text fontSize="xs" maxWidth={tokens.maxWidth.bodyText}>
+				&copy; {year} Department of Agriculture, Fisheries and Forestry
 			</Text>
 		</Footer>
 	);
