@@ -40,7 +40,6 @@ export const ProgressIndicatorCollapseButton = ({
 	return (
 		<Flex
 			as={BaseButton}
-			role="button"
 			aria-controls={ariaControls}
 			aria-expanded={isOpen}
 			onClick={onClick}

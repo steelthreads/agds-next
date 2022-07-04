@@ -1,9 +1,4 @@
-import {
-	ButtonHTMLAttributes,
-	ElementType,
-	PropsWithChildren,
-	useState,
-} from 'react';
+import { ElementType, PropsWithChildren, useState } from 'react';
 import { useSpring, animated } from '@react-spring/web';
 import {
 	LinkProps,
@@ -11,7 +6,7 @@ import {
 	usePrefersReducedMotion,
 } from '@ag.ds-next/core';
 import { Flex } from '@ag.ds-next/box';
-import { BaseButton } from '@ag.ds-next/button';
+import { BaseButton, BaseButtonProps } from '@ag.ds-next/button';
 import { ChevronRightIcon } from '@ag.ds-next/icon';
 import { TextLink } from '@ag.ds-next/text-link';
 
@@ -21,7 +16,7 @@ export const CallToActionLink = (props: CallToActionLinkProps) => (
 	<CallToAction as={TextLink} {...props} />
 );
 
-export type CallToActionButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
+export type CallToActionButtonProps = BaseButtonProps;
 
 export const CallToActionButton = (props: CallToActionButtonProps) => {
 	return <CallToAction as={BaseButton} {...props} />;

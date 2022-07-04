@@ -1,11 +1,4 @@
-import {
-	ButtonHTMLAttributes,
-	ComponentType,
-	forwardRef,
-	Fragment,
-	PropsWithChildren,
-	ReactNode,
-} from 'react';
+import { ComponentType, forwardRef, Fragment, ReactNode } from 'react';
 import { LinkProps, useLinkComponent } from '@ag.ds-next/core';
 import { IconProps } from '@ag.ds-next/icon';
 import { LoadingDots } from '@ag.ds-next/loading';
@@ -16,13 +9,11 @@ import {
 	iconSize,
 	loadingSize,
 } from './styles';
-import { BaseButton } from './BaseButton';
+import { BaseButton, BaseButtonProps } from './BaseButton';
 
-type CommonButtonProps = PropsWithChildren<{
+type CommonButtonProps = {
 	/** If true, the button will stretch to the fill the width of its container/ */
 	block?: boolean;
-	/** The CSS class name, typically generated from the `css` prop. */
-	className?: string;
 	/** The icon to display before the buttons children. */
 	iconBefore?: ComponentType<IconProps>;
 	/** The icon to display after the buttons children. */
@@ -35,26 +26,9 @@ type CommonButtonProps = PropsWithChildren<{
 	size?: ButtonSize;
 	/** The variant of the button. */
 	variant?: ButtonVariant;
-}>;
-
-type NativeButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
-
-export type ButtonProps = CommonButtonProps & {
-	/** Identifies the element (or elements) whose contents or presence are controlled by the current element. */
-	'aria-controls'?: NativeButtonProps['aria-controls'];
-	/** Identifies the element (or elements) that describes the object. */
-	'aria-describedby'?: NativeButtonProps['aria-describedby'];
-	/** Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed. */
-	'aria-expanded'?: NativeButtonProps['aria-expanded'];
-	/** Describes the button element to assistive technologies. */
-	'aria-label'?: NativeButtonProps['aria-label'];
-	/** When true, prevents onClick from firing. */
-	disabled?: boolean;
-	/** Function to be fired following a click event of the button. */
-	onClick?: NativeButtonProps['onClick'];
-	/** Provide an alternate type if the button is within a form. */
-	type?: NativeButtonProps['type'];
 };
+
+export type ButtonProps = CommonButtonProps & BaseButtonProps;
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 	function Button(

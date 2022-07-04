@@ -33,7 +33,6 @@ export const SideNavCollapseButton = ({
 	return (
 		<Flex
 			as={BaseButton}
-			role="button"
 			aria-controls={ariaControls}
 			aria-expanded={isOpen}
 			aria-haspopup="menu"
