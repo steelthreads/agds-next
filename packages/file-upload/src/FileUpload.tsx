@@ -182,7 +182,9 @@ export const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
 										<Stack as="ul" gap={0.5}>
 											{value.map((file, index) => (
 												<FileUploadFile
-													file={file}
+													name={file.name}
+													size={file.size}
+													status={file.status}
 													key={index}
 													onRemove={() => handleRemoveFile(file)}
 												/>
@@ -192,15 +194,20 @@ export const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
 								) : null}
 								{fileRejections.length ? (
 									<Stack as="ul" gap={0.5}>
-										{fileRejections.map((err, index) => (
-											<FileRejection key={index}>
-												{getFileRejectionErrorMessage(
-													err,
-													formattedMaxFileSize,
-													acceptedFilesSummary
-												)}
-											</FileRejection>
-										))}
+										{fileRejections.map((rejection, index) => {
+											const firstError = rejection.errors[0];
+
+											const errorMessage = getFileRejectionErrorMessage(
+												rejection,
+												formattedMaxFileSize,
+												acceptedFilesSummary
+											);
+											return (
+												<FileRejection key={index}>
+													{errorMessage}
+												</FileRejection>
+											);
+										})}
 									</Stack>
 								) : null}
 							</Stack>
