@@ -7,7 +7,22 @@ import { Button } from '@ag.ds-next/button';
 import { Field } from '@ag.ds-next/field';
 import { parseDate, formatHumanReadableDate } from './utils';
 
-export type DateInputProps = TextInputProps & {
+export type DateInputProps = Pick<
+	TextInputProps,
+	| 'block'
+	| 'disabled'
+	| 'hint'
+	| 'id'
+	| 'invalid'
+	| 'label'
+	| 'maxWidth'
+	| 'message'
+	| 'onChange'
+	| 'placeholder'
+	| 'required'
+	| 'valid'
+	| 'value'
+> & {
 	buttonRef: RefObject<HTMLButtonElement>;
 	buttonOnClick: MouseEventHandler<HTMLButtonElement>;
 };
@@ -28,7 +43,8 @@ export const DateInput = forwardRef<HTMLInputElement, DateInputProps>(
 			buttonOnClick,
 			disabled,
 			value,
-			...props
+			onChange,
+			placeholder,
 		},
 		ref
 	) {
@@ -64,9 +80,10 @@ export const DateInput = forwardRef<HTMLInputElement, DateInputProps>(
 							ref={ref}
 							css={{ ...styles, maxWidth: 'unset' }}
 							{...allyProps}
-							{...props}
 							value={value}
+							onChange={onChange}
 							disabled={disabled}
+							placeholder={placeholder}
 						/>
 						<Button
 							type="button"
