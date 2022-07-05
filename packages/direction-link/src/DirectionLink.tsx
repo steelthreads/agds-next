@@ -1,7 +1,7 @@
-import { ButtonHTMLAttributes, ElementType, PropsWithChildren } from 'react';
+import { ElementType, PropsWithChildren } from 'react';
 import { LinkProps } from '@ag.ds-next/core';
 import { Flex } from '@ag.ds-next/box';
-import { BaseButton } from '@ag.ds-next/button';
+import { BaseButton, BaseButtonProps } from '@ag.ds-next/button';
 import {
 	ArrowDownIcon,
 	ArrowRightIcon,
@@ -13,6 +13,7 @@ import { TextLink } from '@ag.ds-next/text-link';
 export type Direction = 'up' | 'right' | 'down' | 'left';
 
 export type DirectionLinkProps = LinkProps & {
+	/** The direction of the link. */
 	direction: Direction;
 };
 
@@ -22,7 +23,8 @@ export const DirectionLink = ({ children, ...props }: DirectionLinkProps) => (
 	</BaseDirectionLink>
 );
 
-export type DirectionButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+export type DirectionButtonProps = BaseButtonProps & {
+	/** The direction of the link. */
 	direction: Direction;
 };
 
