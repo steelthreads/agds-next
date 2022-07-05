@@ -16,6 +16,7 @@ export default {
 
 const defaultArgs = {
 	title: 'Lodging your tax return',
+	titleLink: '#',
 	collapseTitle: 'In this section',
 	items: [
 		{

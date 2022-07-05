@@ -30,12 +30,20 @@ export const ProgressIndicator = ({ items }: ProgressIndicatorProps) => {
 	const animatedHeight = useSpring({
 		from: { display: 'none', height: 0 },
 		to: async (next) => {
-			if (isOpen) await next({ display: 'block' });
+			// Show the element so it's height can be animated
+			if (isOpen) await next({ display: 'block', overflow: 'hidden' });
+			// Animate the elements height
 			await next({
+				overflow: 'hidden',
 				height: isOpen ? ref.current?.offsetHeight : 0,
 				immediate: prefersReducedMotion,
 			});
-			await next(isOpen ? { height: 'auto' } : { display: 'none' });
+			// Animation end state
+			await next(
+				isOpen
+					? { height: 'auto', overflow: 'initial' }
+					: { display: 'none', overflow: 'initial' }
+			);
 		},
 	});
 
@@ -53,7 +61,6 @@ export const ProgressIndicator = ({ items }: ProgressIndicatorProps) => {
 				aria-labelledby={buttonId}
 				style={animatedHeight}
 				css={{
-					overflow: 'hidden',
 					// Overwrite the animated height for tablet/desktop sizes.
 					[tokens.mediaQuery.min.md]: {
 						overflow: 'unset',
