@@ -1,4 +1,4 @@
-import { Flex } from '@ag.ds-next/box';
+import { Box, Flex } from '@ag.ds-next/box';
 import { AlertFilledIcon } from '@ag.ds-next/icon';
 import { Text } from '@ag.ds-next/text';
 
@@ -14,7 +14,11 @@ export const FieldMessage = ({
 	valid?: boolean;
 }) => (
 	<Flex gap={0.5} alignItems="center">
-		{invalid ? <AlertFilledIcon color="error" size="md" /> : null}
+		{invalid ? (
+			<Box flexShrink={0}>
+				<AlertFilledIcon color="error" size="md" />
+			</Box>
+		) : null}
 		<Text
 			display="block"
 			fontWeight="bold"
