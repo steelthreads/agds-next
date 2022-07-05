@@ -43,6 +43,7 @@ export const coreContext = createContext({
 export type LinkComponent = typeof DefaultLinkComponent;
 
 export type CoreProviderProps = PropsWithChildren<{
+	/** The global link component which can be configured for different routing libraries. Defaults to standard `a` tag. */
 	linkComponent?: LinkComponent;
 }>;
 
