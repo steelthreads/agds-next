@@ -12,6 +12,7 @@ import { ChevronUpIcon } from './icons/ChevronUpIcon';
 import { CloseIcon } from './icons/CloseIcon';
 import { CopyIcon } from './icons/CopyIcon';
 import { ExternalLinkIcon } from './icons/ExternalLinkIcon';
+import { InfoIcon } from './icons/InfoIcon';
 import { InfoFilledIcon } from './icons/InfoFilledIcon';
 import { MenuIcon } from './icons/MenuIcon';
 import { ProgressDoingIcon } from './icons/ProgressDoingIcon';
@@ -21,6 +22,7 @@ import { SearchIcon } from './icons/SearchIcon';
 import { SuccessFilledIcon } from './icons/SuccessFilledIcon';
 import { SuccessIcon } from './icons/SuccessIcon';
 import { UploadIcon } from './icons/UploadIcon';
+import { WarningIcon } from './icons/WarningIcon';
 import { WarningFilledIcon } from './icons/WarningFilledIcon';
 
 export const allIcons = {
@@ -38,6 +40,7 @@ export const allIcons = {
 	CloseIcon,
 	CopyIcon,
 	ExternalLinkIcon,
+	InfoIcon,
 	InfoFilledIcon,
 	MenuIcon,
 	ProgressDoingIcon,
@@ -47,5 +50,6 @@ export const allIcons = {
 	SuccessFilledIcon,
 	SuccessIcon,
 	UploadIcon,
+	WarningIcon,
 	WarningFilledIcon,
 };
