@@ -4,6 +4,9 @@
 	"main": "dist/ag.ds-next-inpage-nav.cjs.js",
 	"module": "dist/ag.ds-next-inpage-nav.esm.js",
 	"license": "MIT",
+	"dependencies": {
+		"@babel/runtime": "^7.4.5"
+	},
 	"peerDependencies": {
 		"@ag.ds-next/box": "6.0.0",
 		"@ag.ds-next/core": "3.0.0",

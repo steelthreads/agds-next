@@ -5,6 +5,7 @@
 	"module": "dist/ag.ds-next-main-nav.esm.js",
 	"license": "MIT",
 	"dependencies": {
+		"@babel/runtime": "^7.4.5",
 		"react-focus-lock": "^2.8.1"
 	},
 	"peerDependencies": {

@@ -4,6 +4,9 @@
 	"main": "dist/ag.ds-next-breadcrumbs.cjs.js",
 	"module": "dist/ag.ds-next-breadcrumbs.esm.js",
 	"license": "MIT",
+	"dependencies": {
+		"@babel/runtime": "^7.4.5"
+	},
 	"peerDependencies": {
 		"@ag.ds-next/a11y": "1.2.0",
 		"@ag.ds-next/box": "6.0.0",

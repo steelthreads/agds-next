@@ -5,6 +5,7 @@
 	"module": "dist/ag.ds-next-search-box.esm.js",
 	"license": "MIT",
 	"dependencies": {
+		"@babel/runtime": "^7.4.5",
 		"@reach/auto-id": "^0.16.0"
 	},
 	"peerDependencies": {

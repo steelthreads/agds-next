@@ -4,6 +4,9 @@
 	"main": "dist/ag.ds-next-ag-branding.cjs.js",
 	"module": "dist/ag.ds-next-ag-branding.esm.js",
 	"license": "MIT",
+	"dependencies": {
+		"@babel/runtime": "^7.4.5"
+	},
 	"peerDependencies": {
 		"@ag.ds-next/core": "3.0.0",
 		"@emotion/react": "^11.7.0"

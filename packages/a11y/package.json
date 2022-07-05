@@ -4,6 +4,9 @@
 	"main": "dist/ag.ds-next-a11y.cjs.js",
 	"module": "dist/ag.ds-next-a11y.esm.js",
 	"license": "MIT",
+	"dependencies": {
+		"@babel/runtime": "^7.4.5"
+	},
 	"peerDependencies": {
 		"@emotion/react": "^11.7.0",
 		"react": "^16.14.0 || ^17.0.0 || ^18.0.0"
