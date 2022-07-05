@@ -7,13 +7,21 @@ import { FieldMessage } from './FieldMessage';
 
 export type FieldProps = {
 	children: ((allyProps: A11yProps) => ReactNode) | ReactNode;
+	/** Provides extra information about the field. */
 	hint: string | undefined;
+	/** Defines an identifier (ID) which must be unique. */
 	id?: string;
+	/** If true, the invalid state will be rendered. */
 	invalid?: boolean;
+	/** Describes the purpose of the field. */
 	label: string;
+	/** Override the default secondary label. */
 	secondaryLabel?: string;
+	/** Message to show when the field is invalid or valid. */
 	message: string | undefined;
+	/** If false, "(optional)" will be appended to the label. */
 	required: boolean;
+	/** If true, the valid state will be rendered. */
 	valid?: boolean;
 };
 
