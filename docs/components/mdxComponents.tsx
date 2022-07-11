@@ -20,16 +20,18 @@ export const mdxComponents: Record<string, any> = {
 	},
 	// Automatically assign an ID to h2 and h3 elements so they can be linked to
 	h2: ({ children }: HTMLAttributes<HTMLHeadingElement>) => {
+		const slug = children ? slugify(children.toString()) : undefined;
 		return (
-			<h2 id={children ? slugify(children.toString()) : undefined}>
-				{children}
+			<h2 id={slug}>
+				<a href={`#${slug}`}>{children} </a>
 			</h2>
 		);
 	},
 	h3: ({ children }: HTMLAttributes<HTMLHeadingElement>) => {
+		const slug = children ? slugify(children.toString()) : undefined;
 		return (
-			<h3 id={children ? slugify(children.toString()) : undefined}>
-				{children}
+			<h3 id={slug}>
+				<a href={`#${slug}`}>{children}</a>
 			</h3>
 		);
 	},
