@@ -21,11 +21,7 @@ export const globalPalette = {
 	darkBorder: `var(${themeVars.darkBorder})`,
 	accent: `var(${themeVars.accent}, ${themeVars.lightForegroundAction})`, // NOTE: accent is optional
 	error: `var(${themeVars.error})`,
-	errorMuted: `var(${themeVars.errorMuted})`,
 	success: `var(${themeVars.success})`,
-	successMuted: `var(${themeVars.successMuted})`,
 	warning: `var(${themeVars.warning})`,
-	warningMuted: `var(${themeVars.warningMuted})`,
 	info: `var(${themeVars.info})`,
-	infoMuted: `var(${themeVars.infoMuted})`,
 } as const;

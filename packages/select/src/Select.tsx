@@ -206,12 +206,12 @@ const selectStyles = ({
 
 		...(invalid
 			? {
-					backgroundColor: globalPalette.errorMuted,
+					backgroundColor: boxPalette.backgroundError,
 					borderColor: globalPalette.error,
 			  }
 			: valid
 			? {
-					backgroundColor: globalPalette.successMuted,
+					backgroundColor: boxPalette.backgroundSuccess,
 					borderColor: globalPalette.success,
 			  }
 			: undefined),

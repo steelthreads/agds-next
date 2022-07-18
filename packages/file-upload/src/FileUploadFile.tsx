@@ -1,7 +1,7 @@
 import { MouseEventHandler } from 'react';
 import formatFileSize from 'filesize';
 import { Box, Flex } from '@ag.ds-next/box';
-import { boxPalette, globalPalette } from '@ag.ds-next/core';
+import { boxPalette } from '@ag.ds-next/core';
 import { Text } from '@ag.ds-next/text';
 import { Button } from '@ag.ds-next/button';
 import { LoadingDots } from '@ag.ds-next/loading';
@@ -55,5 +55,5 @@ export const FileUploadFile = ({
 const TONE_MAP = {
 	none: boxPalette.backgroundShade,
 	uploading: boxPalette.backgroundShade,
-	success: globalPalette.successMuted,
+	success: boxPalette.backgroundSuccess,
 } as const;

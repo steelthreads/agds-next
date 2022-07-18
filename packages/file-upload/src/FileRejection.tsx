@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { Flex } from '@ag.ds-next/box';
-import { globalPalette } from '@ag.ds-next/core';
+import { boxPalette } from '@ag.ds-next/core';
 import { AlertFilledIcon } from '@ag.ds-next/icon';
 import { Text } from '@ag.ds-next/text';
 
@@ -17,7 +17,7 @@ export const FileRejection = ({ children }: FileRejectionProps) => {
 			rounded
 			padding={1}
 			css={{
-				background: globalPalette.errorMuted,
+				background: boxPalette.backgroundError,
 			}}
 		>
 			<AlertFilledIcon color="error" size="md" />
