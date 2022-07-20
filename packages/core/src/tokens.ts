@@ -77,7 +77,6 @@ const lineHeight = {
 
 export type LineHeight = keyof typeof lineHeight;
 
-// FIXME... it's unclear how spacing should work at the moment.
 export type Spacing = 0 | 0.25 | 0.5 | 0.75 | 1 | 1.5 | 2 | 3 | 4 | 5 | 6;
 
 export function mapSpacing(v: Spacing) {
