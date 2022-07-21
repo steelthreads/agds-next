@@ -49,7 +49,7 @@ export function Combobox<Option extends DefaultOption>({
 	message,
 	invalid,
 	valid,
-	id,
+	id: idProp,
 	disabled,
 	// block,
 	showDropdownTrigger = true,
@@ -58,7 +58,7 @@ export function Combobox<Option extends DefaultOption>({
 	onChange,
 	renderItem = (item) => item.label,
 }: ComboBoxProps<Option>) {
-	const inputId = useComboboxInputId(id);
+	const inputId = useComboboxInputId(idProp);
 	const [loading, setLoading] = useState(false);
 	const [inputItems, setInputItems] = useState<Option[]>(options);
 

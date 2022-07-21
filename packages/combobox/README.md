@@ -1,24 +1,3 @@
----
-title: Combobox
-storybookPath: forms-combobox--default
-isExperimentalPackage: true
----
+## @ag.ds-next/combobox
 
-The `Combobox` allows the user to browse, search, and make a single selection
-from a large list of values.
-
-## Usage
-
-### Controlled component
-
-```jsx live
-<Combobox
-	placeholder="Select a character"
-	items={[
-		{ label: 'Jake', value: 'jake' },
-		{ label: 'Finn', value: 'finn' },
-		{ label: 'BMO', value: 'bmo' },
-	]}
-	onChange={console.log}
-/>
-```
+Documentation for this package can be found here: https://steelthreads.github.io/agds-next/packages/forms/combobox

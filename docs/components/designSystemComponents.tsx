@@ -147,3 +147,4 @@ export {
 	SkeletonText,
 	SkeletonBox,
 } from '@ag.ds-next/skeleton';
+export { Combobox } from '@ag.ds-next/combobox';
