@@ -1,12 +1,12 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Box, Flex } from '@ag.ds-next/box';
+import { Flex } from '@ag.ds-next/box';
 import {
 	AlertFilledIcon,
-	AvatarIcon,
 	InfoFilledIcon,
 	SuccessFilledIcon,
 	WarningFilledIcon,
 } from '@ag.ds-next/icon';
+import { Text } from '@ag.ds-next/text';
 import { Combobox } from './Combobox';
 
 export default {
@@ -210,76 +210,135 @@ const COUNTRIES = [
 	'Yemen',
 	'Zambia',
 	'Zimbabwe',
-];
+].map((country) => ({ label: country, value: country }));
 
-export const Basic = () => (
-	<Combobox
-		label="Select a country"
-		options={COUNTRIES.map((country) => ({ label: country, value: country }))}
-	/>
+const Template: ComponentStory<typeof Combobox> = (args) => (
+	<Combobox {...args} />
 );
 
-type StarWarsCharacter = {
-	name: string;
-	birth_year: string;
+export const Basic = Template.bind({});
+Basic.args = {
+	label: 'Select a country',
+	options: COUNTRIES,
 };
 
-export const Async = () => (
-	<Combobox
-		label="Select a character"
-		loadOptions={async (inputValue) => {
-			const response = await fetch(
-				`https://swapi.dev/api/people/?search=${inputValue}`
-			);
-			const data: {
-				results: StarWarsCharacter[];
-			} = await response.json();
-			return data.results.map(({ name, birth_year: birthYear }) => ({
-				value: name,
-				label: `${name} (${birthYear})`,
-				birthYear,
-			}));
-		}}
-		onChange={console.log}
-	/>
-);
+export const Required = Template.bind({});
+Required.args = {
+	label: 'Select a country',
+	options: COUNTRIES,
+	required: true,
+};
 
-export const CustomRender = () => (
-	<Combobox
-		label="Select a status"
-		options={Object.keys(ICON_MAP).map((key) => ({ value: key, label: key }))}
-		renderItem={(option) => {
-			const { icon, label } = ICON_MAP[option.value as keyof typeof ICON_MAP];
-			return (
-				<Flex gap={0.5} alignItems="center">
-					{icon}
-					{label}
-				</Flex>
-			);
-		}}
-	/>
-);
+export const Disabled = Template.bind({});
+Disabled.args = {
+	label: 'Select a country',
+	options: COUNTRIES,
+	disabled: true,
+};
 
-const ICON_MAP = {
-	error: {
-		label: 'I am an error label',
-		icon: <AlertFilledIcon color="error" />,
-	},
-	warning: {
-		label: 'I am an warning label',
-		icon: <WarningFilledIcon color="warning" />,
-	},
-	info: {
-		label: 'I am an info label',
-		icon: <InfoFilledIcon color="info" />,
-	},
-	success: {
-		label: 'I am an success label',
-		icon: <SuccessFilledIcon color="success" />,
-	},
-} as const;
+export const Invalid = Template.bind({});
+Invalid.args = {
+	label: 'Select a country',
+	options: COUNTRIES,
+	message:
+		'Enter an email address in the correct format, like name@example.com',
+	invalid: true,
+};
 
-export const CustomOptionTypes = () => {
+export const Valid = Template.bind({});
+Valid.args = {
+	label: 'Select a country',
+	options: COUNTRIES,
+	message:
+		'Enter an email address in the correct format, like name@example.com',
+	valid: true,
+};
+
+export const Hint = Template.bind({});
+Hint.args = {
+	label: 'Select a country',
+	options: COUNTRIES,
+	hint: 'We will only use this to respond to your question',
+};
+
+export const Block = Template.bind({});
+Block.args = {
+	// block: true,
+	label: 'Select a country',
+	options: COUNTRIES,
+};
+
+export const HiddenDropdownTrigger = Template.bind({});
+HiddenDropdownTrigger.args = {
+	label: 'Select a country',
+	options: COUNTRIES,
+	showDropdownTrigger: false,
+};
+
+export const AsyncOptions = () => {
+	return (
+		<Combobox
+			label="Select a character"
+			required
+			showDropdownTrigger={false}
+			loadOptions={async (inputValue) => {
+				const response = await fetch(
+					`https://swapi.dev/api/people/?search=${inputValue}`
+				);
+				const data: {
+					results: { name: string; birth_year: string }[];
+				} = await response.json();
+				return data.results.map(({ name, birth_year }) => ({
+					value: name,
+					label: `${name} (${birth_year})`,
+				}));
+			}}
+			onChange={console.log}
+		/>
+	);
+};
+
+export const CustomRender = () => {
+	const ICON_MAP = {
+		error: {
+			label: 'Error label',
+			icon: <AlertFilledIcon color="error" />,
+		},
+		warning: {
+			label: 'Warning label',
+			icon: <WarningFilledIcon color="warning" />,
+		},
+		info: {
+			label: 'Info label',
+			icon: <InfoFilledIcon color="info" />,
+		},
+		success: {
+			label: 'Success label',
+			icon: <SuccessFilledIcon color="success" />,
+		},
+	} as const;
+	return (
+		<Combobox
+			label="Select a status"
+			required
+			options={Object.values(ICON_MAP).map(({ label }) => ({
+				value: label,
+				label: label,
+			}))}
+			renderItem={(option) => {
+				const { icon, label } = ICON_MAP[option.value as keyof typeof ICON_MAP];
+				return (
+					<Flex gap={0.5} alignItems="center">
+						{icon}
+						{label}
+					</Flex>
+				);
+			}}
+		/>
+	);
+};
+
+export const CustomOptionTypescriptTypes = () => {
 	const options = [
 		{
 			id: '1',
@@ -296,16 +355,17 @@ export const CustomOptionTypes = () => {
 			name: 'Charlie',
 			email: 'charlie@example.com',
 		},
-	].map((option) => ({
-		...option,
-		value: option.id,
-		label: option.name,
-	}));
+	].map((option) => ({ ...option, value: option.id, label: option.name }));
 	return (
 		<Combobox
 			label="Select a user"
+			required
 			options={options}
-			renderItem={({ name, email, id }) => `${name} (${email}) (${id})`}
+			renderItem={({ id, name, email }) => (
+				<Text>
+					{id} - {name} - {email}
+				</Text>
+			)}
 		/>
 	);
 };

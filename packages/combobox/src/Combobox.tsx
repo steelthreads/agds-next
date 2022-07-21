@@ -1,22 +1,40 @@
 import { Fragment, ReactNode, useState } from 'react';
+import { useId } from '@reach/auto-id';
 import { useCombobox } from 'downshift';
 import { usePopper } from 'react-popper';
 import { textInputStyles } from '@ag.ds-next/text-input';
 import { ChevronDownIcon } from '@ag.ds-next/icon';
 import { Button } from '@ag.ds-next/button';
-import { FieldContainer, FieldHint, FieldLabel } from '@ag.ds-next/field';
-import { Box, Flex, Stack } from '@ag.ds-next/box';
+import { Field } from '@ag.ds-next/field';
+import { Flex } from '@ag.ds-next/box';
 import { mapSpacing } from '@ag.ds-next/core';
 import { ComboboxList } from './ComboboxList';
 import { ComboboxListItem } from './ComboboxListItem';
-import { LoadingDots } from '@ag.ds-next/loading';
-import { Text } from '@ag.ds-next/text';
+import { ComboboxListLoading } from './ComboboxListLoading';
+import { ComboboxListEmptyResults } from './ComboboxListEmptyResults';
 
 type DefaultOption = { label: string; value: string };
 
 type ComboBoxProps<Option extends DefaultOption> = {
+	/** Describes the purpose of the field. */
 	label: string;
+	/** If false, "(optional)" will be appended to the label. */
+	required?: boolean;
+	/** Provides extra information about the field. */
 	hint?: string;
+	/** Message to show when the field is invalid or valid. */
+	message?: string;
+	/** If true, the invalid state will be rendered. */
+	invalid?: boolean;
+	/** If true, the valid state will be rendered. */
+	valid?: boolean;
+	// /** If true, the field will stretch to the fill the width of its container. */
+	// block?: boolean;
+	// /** The maximum width of the field. */
+	// maxWidth?: FieldMax;
+	id?: string;
+	name?: string;
+	showDropdownTrigger?: boolean;
 	options?: Option[];
 	onChange?: (value: Option) => void;
 	loadOptions?: (inputValue: string) => Promise<Option[]>;
@@ -25,25 +43,33 @@ type ComboBoxProps<Option extends DefaultOption> = {
 
 export function Combobox<Option extends DefaultOption>({
 	label,
+	required,
 	hint,
+	message,
+	invalid,
+	valid,
+	id,
+	// block,
+	showDropdownTrigger = true,
 	options = [],
 	loadOptions,
 	onChange,
 	renderItem = (item) => item.label,
 }: ComboBoxProps<Option>) {
+	const inputId = useComboboxInputId(id);
 	const [loading, setLoading] = useState(false);
 	const [inputItems, setInputItems] = useState<Option[]>(options);
 
 	const {
 		isOpen,
 		getToggleButtonProps,
-		getLabelProps,
 		getMenuProps,
 		getInputProps,
 		getComboboxProps,
 		highlightedIndex,
 		getItemProps,
 	} = useCombobox<Option>({
+		inputId,
 		items: inputItems,
 		itemToString: (item) => item?.label ?? '',
 		onSelectedItemChange: ({ selectedItem }) => {
@@ -58,10 +84,12 @@ export function Combobox<Option extends DefaultOption>({
 				setInputItems(inputItems);
 				setLoading(false);
 			} else {
-				// Synchronos
+				// Synchronous
 				setInputItems(
-					options.filter(({ value }) =>
-						value.toLowerCase().startsWith(inputValue)
+					options.filter(
+						({ value, label }) =>
+							value.toLowerCase().startsWith(inputValue) ||
+							label.toLowerCase().startsWith(inputValue)
 					)
 				);
 			}
@@ -83,88 +111,86 @@ export function Combobox<Option extends DefaultOption>({
 			invalid: false,
 			valid: false,
 		}),
-		borderRight: 'none',
-		borderTopRightRadius: 0,
-		borderBottomRightRadius: 0,
+		...(showDropdownTrigger && {
+			borderRight: 'none',
+			borderTopRightRadius: 0,
+			borderBottomRightRadius: 0,
+		}),
 	};
 
 	return (
 		<div css={{ position: 'relative' }} ref={setRefEl}>
-			<FieldContainer>
-				<FieldLabel {...getLabelProps()}>{label}</FieldLabel>
-				{hint ? <FieldHint>{hint}</FieldHint> : null}
-				<Flex alignItems="flex-end" {...getComboboxProps()}>
-					<input css={inputStyles} {...getInputProps()} />
-					<Button
-						type="button"
-						variant="secondary"
-						{...getToggleButtonProps()}
-						aria-label={'toggle menu'}
-						css={{
-							borderTopLeftRadius: 0,
-							borderBottomLeftRadius: 0,
-							paddingLeft: mapSpacing(1),
-							paddingRight: mapSpacing(1),
-						}}
-					>
-						<ChevronDownIcon />
-					</Button>
-				</Flex>
-				<div
-					ref={setPopperEl}
-					style={styles.popper}
-					{...attributes.popper}
-					css={{ zIndex: 1, width: '100%' }}
-				>
-					<ComboboxList {...getMenuProps()} isOpen={isOpen}>
-						{isOpen ? (
-							<Fragment>
-								{loading ? (
-									<ComboboxListLoading />
-								) : (
-									<Fragment>
-										{inputItems.length ? (
-											inputItems.map((item, index) => {
-												const isActiveItem = highlightedIndex === index;
-												return (
-													<ComboboxListItem
-														key={`${item.value}${index}`}
-														isActiveItem={isActiveItem}
-														{...getItemProps({ item, index })}
-													>
-														{renderItem(item)}
-													</ComboboxListItem>
-												);
-											})
-										) : (
-											<ComboboxListEmptyResults />
-										)}
-									</Fragment>
-								)}
-							</Fragment>
-						) : null}
-					</ComboboxList>
-				</div>
-			</FieldContainer>
+			<Field
+				label={label}
+				required={Boolean(required)}
+				hint={hint}
+				message={message}
+				invalid={invalid}
+				valid={valid}
+				id={inputId}
+			>
+				{(allyProps) => (
+					<Flex alignItems="flex-end" {...getComboboxProps()}>
+						<input css={inputStyles} {...allyProps} {...getInputProps()} />
+						{showDropdownTrigger && (
+							<Button
+								type="button"
+								variant="secondary"
+								{...getToggleButtonProps()}
+								aria-label="Toggle menu"
+								css={{
+									borderTopLeftRadius: 0,
+									borderBottomLeftRadius: 0,
+									paddingLeft: mapSpacing(1),
+									paddingRight: mapSpacing(1),
+								}}
+							>
+								<ChevronDownIcon />
+							</Button>
+						)}
+					</Flex>
+				)}
+			</Field>
+			<div
+				ref={setPopperEl}
+				style={styles.popper}
+				{...attributes.popper}
+				css={{ zIndex: 1, width: '100%' }}
+			>
+				<ComboboxList {...getMenuProps()} isOpen={isOpen}>
+					{isOpen ? (
+						<Fragment>
+							{loading ? (
+								<ComboboxListLoading />
+							) : (
+								<Fragment>
+									{inputItems.length ? (
+										inputItems.map((item, index) => {
+											const isActiveItem = highlightedIndex === index;
+											return (
+												<ComboboxListItem
+													key={`${item.value}${index}`}
+													isActiveItem={isActiveItem}
+													{...getItemProps({ item, index })}
+												>
+													{renderItem(item)}
+												</ComboboxListItem>
+											);
+										})
+									) : (
+										<ComboboxListEmptyResults />
+									)}
+								</Fragment>
+							)}
+						</Fragment>
+					) : null}
+				</ComboboxList>
+			</div>
 		</div>
 	);
 }
 
-function ComboboxListLoading() {
-	return (
-		<ComboboxListItem isActiveItem={false}>
-			<Flex gap={1} padding={0.5} alignItems="center" justifyContent="center">
-				<LoadingDots size="sm" aria-label="Loading" />
-				<Text>Loading</Text>
-			</Flex>
-		</ComboboxListItem>
-	);
-}
-
-function ComboboxListEmptyResults() {
-	return (
-		<ComboboxListItem isActiveItem={false}>
-			<Text>No options found.</Text>
-		</ComboboxListItem>
-	);
+function useComboboxInputId(idProp?: string) {
+	const autoId = useId();
+	return idProp || `combobox-input-${autoId}`;
 }
