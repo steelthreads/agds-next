@@ -9,6 +9,11 @@ type AppLayoutProps = {
 };
 
 export const AppLayout = ({ children }: AppLayoutProps) => {
+	const isDarkModeOn =
+		typeof window !== 'undefined' &&
+		window.matchMedia &&
+		window.matchMedia('(prefers-color-scheme: dark)').matches;
+
 	return (
 		<>
 			<SkipLinks
@@ -20,7 +25,8 @@ export const AppLayout = ({ children }: AppLayoutProps) => {
 			<Flex
 				flexDirection="column"
 				fontFamily="body"
-				palette="light"
+				palette={isDarkModeOn ? 'dark' : 'light'}
+				background="body"
 				minHeight="100vh"
 			>
 				<SiteHeader />
