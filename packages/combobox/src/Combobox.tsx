@@ -32,6 +32,7 @@ type ComboBoxProps<Option extends DefaultOption> = {
 	// block?: boolean;
 	// /** The maximum width of the field. */
 	// maxWidth?: FieldMax;
+	disabled?: boolean;
 	id?: string;
 	name?: string;
 	showDropdownTrigger?: boolean;
@@ -49,6 +50,7 @@ export function Combobox<Option extends DefaultOption>({
 	invalid,
 	valid,
 	id,
+	disabled,
 	// block,
 	showDropdownTrigger = true,
 	options = [],
@@ -131,13 +133,19 @@ export function Combobox<Option extends DefaultOption>({
 			>
 				{(allyProps) => (
 					<Flex alignItems="flex-end" {...getComboboxProps()}>
-						<input css={inputStyles} {...allyProps} {...getInputProps()} />
+						<input
+							css={inputStyles}
+							disabled={disabled}
+							{...allyProps}
+							{...getInputProps()}
+						/>
 						{showDropdownTrigger && (
 							<Button
 								type="button"
 								variant="secondary"
-								{...getToggleButtonProps()}
+								disabled={disabled}
 								aria-label="Toggle menu"
+								{...getToggleButtonProps()}
 								css={{
 									borderTopLeftRadius: 0,
 									borderBottomLeftRadius: 0,
