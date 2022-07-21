@@ -1,0 +1,49 @@
+---
+title: Combobox
+description: Allows the user to browse, search, and make a single selection from a large list of values.
+group: Forms
+storybookPath: /story/forms-combobox--basic
+---
+
+```jsx live
+() => {
+	const [value, setValue] = React.useState(null);
+	return (
+		<Combobox
+			label="Select a character"
+			options={[
+				{ label: 'Jake', value: 'jake' },
+				{ label: 'Finn', value: 'finn' },
+				{ label: 'BMO', value: 'bmo' },
+			]}
+			onChange={(value) => setValue(value)}
+			value={value}
+		/>
+	);
+};
+```
+
+## Async options
+
+## Auto complete
+
+```jsx live
+() => {
+	const [value, setValue] = React.useState(null);
+	return (
+		<Combobox
+			label="Select an address"
+			hint="Start typing to search for results"
+			options={[
+				{ label: 'Jake', value: 'jake' },
+				{ label: 'Finn', value: 'finn' },
+				{ label: 'BMO', value: 'bmo' },
+			]}
+			onChange={(value) => setValue(value)}
+			value={value}
+			showDropdownTrigger={false}
+			required
+		/>
+	);
+};
+```
