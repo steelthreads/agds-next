@@ -1,6 +1,6 @@
 {
 	"name": "@ag.ds-next/search-box",
-	"version": "10.0.0",
+	"version": "11.0.0",
 	"main": "dist/ag.ds-next-search-box.cjs.js",
 	"module": "dist/ag.ds-next-search-box.esm.js",
 	"license": "MIT",
@@ -9,13 +9,13 @@
 		"@reach/auto-id": "^0.16.0"
 	},
 	"peerDependencies": {
-		"@ag.ds-next/a11y": "1.2.0",
-		"@ag.ds-next/box": "6.0.0",
-		"@ag.ds-next/button": "9.1.0",
-		"@ag.ds-next/core": "3.0.0",
-		"@ag.ds-next/icon": "9.0.0",
-		"@ag.ds-next/text": "8.0.0",
-		"@ag.ds-next/text-input": "9.0.0",
+		"@ag.ds-next/a11y": "1.2.1",
+		"@ag.ds-next/box": "6.1.0",
+		"@ag.ds-next/button": "10.0.0",
+		"@ag.ds-next/core": "3.0.1",
+		"@ag.ds-next/icon": "10.0.0",
+		"@ag.ds-next/text": "9.0.0",
+		"@ag.ds-next/text-input": "10.0.0",
 		"@emotion/react": "^11.7.0",
 		"react": "^16.14.0 || ^17.0.0 || ^18.0.0"
 	},

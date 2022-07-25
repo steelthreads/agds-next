@@ -1,5 +1,21 @@
 # @ag.ds-next/body
 
+## 8.0.0
+
+### Patch Changes
+
+- bc7c629d6: Update documentation
+- 27b6ef36b: Added styles for tables
+- 4a226fe8d: Allow consumers to keep vertical rhythm on specific elements using `bodyBlockClassname`
+- 042fb9e8c: Added `@babel/runtime` as a package dependency.
+- Updated dependencies [0f76d269a]
+- Updated dependencies [d43864f0e]
+- Updated dependencies [27b6ef36b]
+- Updated dependencies [46eea44f4]
+- Updated dependencies [042fb9e8c]
+  - @ag.ds-next/box@6.1.0
+  - @ag.ds-next/core@3.0.1
+
 ## 7.0.0
 
 ### Patch Changes

@@ -1,13 +1,13 @@
 {
 	"name": "@ag.ds-next/skeleton",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"main": "dist/ag.ds-next-skeleton.cjs.js",
 	"module": "dist/ag.ds-next-skeleton.esm.js",
 	"license": "MIT",
 	"peerDependencies": {
-		"@ag.ds-next/box": "6.0.0",
-		"@ag.ds-next/core": "3.0.0",
-		"@ag.ds-next/heading": "7.0.0",
+		"@ag.ds-next/box": "6.1.0",
+		"@ag.ds-next/core": "3.0.1",
+		"@ag.ds-next/heading": "8.0.0",
 		"@emotion/react": "^11.7.0",
 		"react": "^16.14.0 || ^17.0.0 || ^18.0.0"
 	},

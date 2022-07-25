@@ -1,5 +1,111 @@
 # @ag.ds-next/example-site
 
+## 0.3.1
+
+### Patch Changes
+
+- 1df395f12: Updated copyright from 'Commonwealth of Australia' to 'Department of Agriculture, Fisheries and Forestry'
+- Updated dependencies [bef68c34e]
+- Updated dependencies [797ca223f]
+- Updated dependencies [0f76d269a]
+- Updated dependencies [c0dc7a79e]
+- Updated dependencies [d43864f0e]
+- Updated dependencies [4c73c5747]
+- Updated dependencies [26a7dc53c]
+- Updated dependencies [b73cf3ade]
+- Updated dependencies [8969f876a]
+- Updated dependencies [062184833]
+- Updated dependencies [bc7c629d6]
+- Updated dependencies [69ef154cc]
+- Updated dependencies [2ee1443ee]
+- Updated dependencies [4829c105f]
+- Updated dependencies [34ded166e]
+- Updated dependencies [1827720eb]
+- Updated dependencies [43fa70f0f]
+- Updated dependencies [7e90951bb]
+- Updated dependencies [c9413c905]
+- Updated dependencies [af72175b3]
+- Updated dependencies [4c370db43]
+- Updated dependencies [4ea3bd2c2]
+- Updated dependencies [272c39925]
+- Updated dependencies [27b6ef36b]
+- Updated dependencies [880ab6c37]
+- Updated dependencies [80aaf3ded]
+- Updated dependencies [5dc4b6fd1]
+- Updated dependencies [3271a1fd3]
+- Updated dependencies [89372aa9d]
+- Updated dependencies [27b6ef36b]
+- Updated dependencies [4a226fe8d]
+- Updated dependencies [b13fa0593]
+- Updated dependencies [db54c495b]
+- Updated dependencies [697615cd6]
+- Updated dependencies [0d0cc187b]
+- Updated dependencies [675eb90cd]
+- Updated dependencies [e769cb490]
+- Updated dependencies [36056c812]
+- Updated dependencies [5b573b930]
+- Updated dependencies [fee0e7c30]
+- Updated dependencies [46eea44f4]
+- Updated dependencies [dda722445]
+- Updated dependencies [eb79bfb77]
+- Updated dependencies [d354c5c36]
+- Updated dependencies [48c64b03e]
+- Updated dependencies [9c434b358]
+- Updated dependencies [1df395f12]
+- Updated dependencies [2561a1cc8]
+- Updated dependencies [3c01cd424]
+- Updated dependencies [46dc5310d]
+- Updated dependencies [a30165b00]
+- Updated dependencies [648324c71]
+- Updated dependencies [b0d04ab07]
+- Updated dependencies [c9413c905]
+- Updated dependencies [9506faf98]
+- Updated dependencies [c970b5d81]
+- Updated dependencies [c9413c905]
+- Updated dependencies [042fb9e8c]
+- Updated dependencies [633228a0f]
+- Updated dependencies [a59985d66]
+- Updated dependencies [ddd77324f]
+  - @ag.ds-next/search-box@11.0.0
+  - @ag.ds-next/select@10.0.0
+  - @ag.ds-next/text-input@10.0.0
+  - @ag.ds-next/textarea@10.0.0
+  - @ag.ds-next/card@6.0.0
+  - @ag.ds-next/box@6.1.0
+  - @ag.ds-next/inpage-nav@8.0.0
+  - @ag.ds-next/core@3.0.1
+  - @ag.ds-next/field@9.0.0
+  - @ag.ds-next/form-stack@5.0.0
+  - @ag.ds-next/icon@10.0.0
+  - @ag.ds-next/body@8.0.0
+  - @ag.ds-next/columns@7.0.0
+  - @ag.ds-next/content@8.0.0
+  - @ag.ds-next/progress-indicator@11.0.0
+  - @ag.ds-next/side-nav@12.0.0
+  - @ag.ds-next/skip-link@8.0.0
+  - @ag.ds-next/accordion@9.0.0
+  - @ag.ds-next/call-to-action@9.0.0
+  - @ag.ds-next/main-nav@13.0.0
+  - @ag.ds-next/page-alert@6.0.0
+  - @ag.ds-next/button@10.0.0
+  - @ag.ds-next/heading@8.0.0
+  - @ag.ds-next/callout@6.0.0
+  - @ag.ds-next/tags@8.0.0
+  - @ag.ds-next/ag-branding@6.1.1
+  - @ag.ds-next/keyword-list@8.0.0
+  - @ag.ds-next/direction-link@9.0.0
+  - @ag.ds-next/header@10.0.0
+  - @ag.ds-next/task-list@9.0.0
+  - @ag.ds-next/a11y@1.2.1
+  - @ag.ds-next/link-list@11.0.0
+  - @ag.ds-next/footer@8.0.0
+  - @ag.ds-next/control-input@10.0.0
+  - @ag.ds-next/fieldset@6.0.0
+  - @ag.ds-next/breadcrumbs@13.0.0
+  - @ag.ds-next/text-link@5.0.0
+  - @ag.ds-next/text@9.0.0
+  - @ag.ds-next/badge@1.0.0
+
 ## 0.3.0
 
 ### Minor Changes

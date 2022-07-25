@@ -1,6 +1,6 @@
 {
 	"name": "@ag.ds-next/box",
-	"version": "6.0.0",
+	"version": "6.1.0",
 	"main": "dist/ag.ds-next-box.cjs.js",
 	"module": "dist/ag.ds-next-box.esm.js",
 	"license": "MIT",
@@ -8,7 +8,7 @@
 		"@babel/runtime": "^7.4.5"
 	},
 	"peerDependencies": {
-		"@ag.ds-next/core": "3.0.0",
+		"@ag.ds-next/core": "3.0.1",
 		"@emotion/react": "^11.7.0"
 	},
 	"devDependencies": {

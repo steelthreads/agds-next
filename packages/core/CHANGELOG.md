@@ -1,5 +1,13 @@
 # @ag.ds-next/core
 
+## 3.0.1
+
+### Patch Changes
+
+- d43864f0e: Updated documentation
+- 27b6ef36b: Added comments to each prop to improve documentation
+- 042fb9e8c: Added `@babel/runtime` as a package dependency.
+
 ## 3.0.0
 
 ### Major Changes

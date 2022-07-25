@@ -1,5 +1,25 @@
 # @ag.ds-next/columns
 
+## 7.0.0
+
+### Major Changes
+
+- 69ef154cc: Using the new `cols` prop on the `Columns`, you can now specify the amount of columns you want in your grid, rather than being forced to use 12 columns everywhere.
+
+  This largely removes the need to use the `Column` component, which greatly improves the API for achieving column layouts.
+
+### Patch Changes
+
+- 1827720eb: Update documentation
+- 042fb9e8c: Added `@babel/runtime` as a package dependency.
+- Updated dependencies [0f76d269a]
+- Updated dependencies [d43864f0e]
+- Updated dependencies [27b6ef36b]
+- Updated dependencies [46eea44f4]
+- Updated dependencies [042fb9e8c]
+  - @ag.ds-next/box@6.1.0
+  - @ag.ds-next/core@3.0.1
+
 ## 6.0.0
 
 ### Minor Changes

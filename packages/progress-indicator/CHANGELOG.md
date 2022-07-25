@@ -1,5 +1,37 @@
 # @ag.ds-next/progress-indicator
 
+## 11.0.0
+
+### Minor Changes
+
+- 3c01cd424: Add background prop
+
+### Patch Changes
+
+- 4829c105f: Improved overflow of mobile version
+- c9413c905: Removed unnecessary button role on collapsible button
+- 042fb9e8c: Added `@babel/runtime` as a package dependency.
+- ddd77324f: Update documentation
+- Updated dependencies [0f76d269a]
+- Updated dependencies [d43864f0e]
+- Updated dependencies [8969f876a]
+- Updated dependencies [43fa70f0f]
+- Updated dependencies [272c39925]
+- Updated dependencies [89372aa9d]
+- Updated dependencies [27b6ef36b]
+- Updated dependencies [db54c495b]
+- Updated dependencies [46eea44f4]
+- Updated dependencies [c9413c905]
+- Updated dependencies [c970b5d81]
+- Updated dependencies [042fb9e8c]
+- Updated dependencies [633228a0f]
+  - @ag.ds-next/box@6.1.0
+  - @ag.ds-next/core@3.0.1
+  - @ag.ds-next/icon@10.0.0
+  - @ag.ds-next/button@10.0.0
+  - @ag.ds-next/text-link@5.0.0
+  - @ag.ds-next/text@9.0.0
+
 ## 10.0.0
 
 ### Patch Changes

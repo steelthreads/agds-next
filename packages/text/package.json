@@ -1,6 +1,6 @@
 {
 	"name": "@ag.ds-next/text",
-	"version": "8.0.0",
+	"version": "9.0.0",
 	"main": "dist/ag.ds-next-text.cjs.js",
 	"module": "dist/ag.ds-next-text.esm.js",
 	"license": "MIT",
@@ -8,8 +8,8 @@
 		"@babel/runtime": "^7.4.5"
 	},
 	"peerDependencies": {
-		"@ag.ds-next/box": "6.0.0",
-		"@ag.ds-next/core": "3.0.0",
+		"@ag.ds-next/box": "6.1.0",
+		"@ag.ds-next/core": "3.0.1",
 		"@emotion/react": "^11.7.0"
 	},
 	"devDependencies": {

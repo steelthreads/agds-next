@@ -1,5 +1,20 @@
 # @ag.ds-next/box
 
+## 6.1.0
+
+### Minor Changes
+
+- 46eea44f4: Add support for `columnGap` and `rowGap` props
+
+### Patch Changes
+
+- 0f76d269a: Update documentation
+- 042fb9e8c: Added `@babel/runtime` as a package dependency.
+- Updated dependencies [d43864f0e]
+- Updated dependencies [27b6ef36b]
+- Updated dependencies [042fb9e8c]
+  - @ag.ds-next/core@3.0.1
+
 ## 6.0.0
 
 ### Patch Changes

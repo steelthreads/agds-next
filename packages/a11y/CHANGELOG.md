@@ -1,5 +1,12 @@
 # @ag.ds-next/a11y
 
+## 1.2.1
+
+### Patch Changes
+
+- d354c5c36: Update documentation
+- 042fb9e8c: Added `@babel/runtime` as a package dependency.
+
 ## 1.2.0
 
 ### Minor Changes

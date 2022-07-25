@@ -1,5 +1,40 @@
 # @ag.ds-next/file-upload
 
+## 5.0.0
+
+### Minor Changes
+
+- 24a627354: Refreshed UI for invalid files
+
+### Patch Changes
+
+- fee0e7c30: Updated documentation
+- 42578efa2: Minor documentation reword
+- 042fb9e8c: Added `@babel/runtime` as a package dependency.
+- Updated dependencies [0f76d269a]
+- Updated dependencies [d43864f0e]
+- Updated dependencies [26a7dc53c]
+- Updated dependencies [8969f876a]
+- Updated dependencies [062184833]
+- Updated dependencies [43fa70f0f]
+- Updated dependencies [272c39925]
+- Updated dependencies [3271a1fd3]
+- Updated dependencies [89372aa9d]
+- Updated dependencies [27b6ef36b]
+- Updated dependencies [db54c495b]
+- Updated dependencies [46eea44f4]
+- Updated dependencies [c9413c905]
+- Updated dependencies [042fb9e8c]
+- Updated dependencies [cec044d6e]
+- Updated dependencies [633228a0f]
+  - @ag.ds-next/box@6.1.0
+  - @ag.ds-next/core@3.0.1
+  - @ag.ds-next/field@9.0.0
+  - @ag.ds-next/icon@10.0.0
+  - @ag.ds-next/button@10.0.0
+  - @ag.ds-next/loading@5.0.0
+  - @ag.ds-next/text@9.0.0
+
 ## 4.0.0
 
 ### Patch Changes

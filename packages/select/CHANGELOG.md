@@ -1,5 +1,30 @@
 # @ag.ds-next/select
 
+## 10.0.0
+
+### Minor Changes
+
+- bef68c34e: - Updated documentation
+  - Narrowed down prop types
+
+### Patch Changes
+
+- 042fb9e8c: Added `@babel/runtime` as a package dependency.
+- Updated dependencies [0f76d269a]
+- Updated dependencies [d43864f0e]
+- Updated dependencies [26a7dc53c]
+- Updated dependencies [8969f876a]
+- Updated dependencies [062184833]
+- Updated dependencies [43fa70f0f]
+- Updated dependencies [3271a1fd3]
+- Updated dependencies [27b6ef36b]
+- Updated dependencies [46eea44f4]
+- Updated dependencies [042fb9e8c]
+  - @ag.ds-next/box@6.1.0
+  - @ag.ds-next/core@3.0.1
+  - @ag.ds-next/field@9.0.0
+  - @ag.ds-next/icon@10.0.0
+
 ## 9.0.1
 
 ### Patch Changes

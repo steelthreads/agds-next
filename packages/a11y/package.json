@@ -1,6 +1,6 @@
 {
 	"name": "@ag.ds-next/a11y",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"main": "dist/ag.ds-next-a11y.cjs.js",
 	"module": "dist/ag.ds-next-a11y.esm.js",
 	"license": "MIT",
