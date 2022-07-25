@@ -1,5 +1,27 @@
 # @ag.ds-next/card
 
+## 6.0.0
+
+### Major Changes
+
+- dda722445: Remove CardList component. Please use `Columns` instead. Check out Storybook or ask the AgDS team to learn more.
+
+### Minor Changes
+
+- 5b573b930: Add support for CSS prop
+
+### Patch Changes
+
+- 797ca223f: Update documentation
+- 042fb9e8c: Added `@babel/runtime` as a package dependency.
+- Updated dependencies [0f76d269a]
+- Updated dependencies [d43864f0e]
+- Updated dependencies [27b6ef36b]
+- Updated dependencies [46eea44f4]
+- Updated dependencies [042fb9e8c]
+  - @ag.ds-next/box@6.1.0
+  - @ag.ds-next/core@3.0.1
+
 ## 5.0.0
 
 ### Minor Changes

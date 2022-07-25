@@ -1,5 +1,25 @@
 # @ag.ds-next/inpage-nav
 
+## 8.0.0
+
+### Patch Changes
+
+- c0dc7a79e: - Updated title in examples
+  - Added prop comments
+- 4c73c5747: Updated documentation
+- 042fb9e8c: Added `@babel/runtime` as a package dependency.
+- Updated dependencies [0f76d269a]
+- Updated dependencies [d43864f0e]
+- Updated dependencies [27b6ef36b]
+- Updated dependencies [46eea44f4]
+- Updated dependencies [c970b5d81]
+- Updated dependencies [042fb9e8c]
+- Updated dependencies [633228a0f]
+  - @ag.ds-next/box@6.1.0
+  - @ag.ds-next/core@3.0.1
+  - @ag.ds-next/text-link@5.0.0
+  - @ag.ds-next/text@9.0.0
+
 ## 7.0.0
 
 ### Patch Changes

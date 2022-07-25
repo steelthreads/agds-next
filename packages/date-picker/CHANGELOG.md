@@ -1,5 +1,43 @@
 # @ag.ds-next/date-picker
 
+## 7.0.0
+
+### Minor Changes
+
+- bef68c34e: - Updated documentation
+  - Narrowed down prop types
+- 0c0b47dd3: - Upgraded `react-day-picker` dependency
+  - Added the ability to disable dates through new `minDate` and `maxDate` props
+  - Fixed bug where incorrect element was being focused when calendar first opened
+  - Fixed bug where users couldn't input a date using the text input after a value was set
+
+### Patch Changes
+
+- 042fb9e8c: Added `@babel/runtime` as a package dependency.
+- Updated dependencies [bef68c34e]
+- Updated dependencies [0f76d269a]
+- Updated dependencies [d43864f0e]
+- Updated dependencies [26a7dc53c]
+- Updated dependencies [8969f876a]
+- Updated dependencies [062184833]
+- Updated dependencies [43fa70f0f]
+- Updated dependencies [272c39925]
+- Updated dependencies [3271a1fd3]
+- Updated dependencies [89372aa9d]
+- Updated dependencies [27b6ef36b]
+- Updated dependencies [db54c495b]
+- Updated dependencies [46eea44f4]
+- Updated dependencies [d354c5c36]
+- Updated dependencies [c9413c905]
+- Updated dependencies [042fb9e8c]
+  - @ag.ds-next/text-input@10.0.0
+  - @ag.ds-next/box@6.1.0
+  - @ag.ds-next/core@3.0.1
+  - @ag.ds-next/field@9.0.0
+  - @ag.ds-next/icon@10.0.0
+  - @ag.ds-next/button@10.0.0
+  - @ag.ds-next/a11y@1.2.1
+
 ## 6.0.0
 
 ### Patch Changes

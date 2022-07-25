@@ -1,5 +1,19 @@
 # @ag.ds-next/text
 
+## 9.0.0
+
+### Patch Changes
+
+- 042fb9e8c: Added `@babel/runtime` as a package dependency.
+- 633228a0f: Updated documentation
+- Updated dependencies [0f76d269a]
+- Updated dependencies [d43864f0e]
+- Updated dependencies [27b6ef36b]
+- Updated dependencies [46eea44f4]
+- Updated dependencies [042fb9e8c]
+  - @ag.ds-next/box@6.1.0
+  - @ag.ds-next/core@3.0.1
+
 ## 8.0.0
 
 ### Major Changes

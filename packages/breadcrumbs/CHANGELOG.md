@@ -1,5 +1,28 @@
 # @ag.ds-next/breadcrumbs
 
+## 13.0.0
+
+### Patch Changes
+
+- 9506faf98: Update documentation
+- 042fb9e8c: Added `@babel/runtime` as a package dependency.
+- Updated dependencies [0f76d269a]
+- Updated dependencies [d43864f0e]
+- Updated dependencies [8969f876a]
+- Updated dependencies [43fa70f0f]
+- Updated dependencies [27b6ef36b]
+- Updated dependencies [46eea44f4]
+- Updated dependencies [d354c5c36]
+- Updated dependencies [c970b5d81]
+- Updated dependencies [042fb9e8c]
+- Updated dependencies [633228a0f]
+  - @ag.ds-next/box@6.1.0
+  - @ag.ds-next/core@3.0.1
+  - @ag.ds-next/icon@10.0.0
+  - @ag.ds-next/a11y@1.2.1
+  - @ag.ds-next/text-link@5.0.0
+  - @ag.ds-next/text@9.0.0
+
 ## 12.0.0
 
 ### Minor Changes

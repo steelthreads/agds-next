@@ -1,5 +1,25 @@
 # @ag.ds-next/button
 
+## 10.0.0
+
+### Patch Changes
+
+- 272c39925: Added default `type="button"` to `BaseButton`
+- 89372aa9d: Update documentation
+- 27b6ef36b: Added comments to each prop to improve documentation
+- db54c495b: Updated documentation
+- c9413c905: Improved prop type definitions for `BaseButton`
+- 042fb9e8c: Added `@babel/runtime` as a package dependency.
+- Updated dependencies [0f76d269a]
+- Updated dependencies [d43864f0e]
+- Updated dependencies [27b6ef36b]
+- Updated dependencies [46eea44f4]
+- Updated dependencies [042fb9e8c]
+- Updated dependencies [cec044d6e]
+  - @ag.ds-next/box@6.1.0
+  - @ag.ds-next/core@3.0.1
+  - @ag.ds-next/loading@5.0.0
+
 ## 9.1.0
 
 ### Minor Changes

@@ -1,5 +1,34 @@
 # @ag.ds-next/side-nav
 
+## 12.0.0
+
+### Major Changes
+
+- e769cb490: Replace 'variant' prop with 'background'
+
+### Patch Changes
+
+- 4829c105f: Improved overflow of mobile version
+- 4c370db43: Updated documentation
+- 48c64b03e: Converted `titleLink` into an optional prop
+- c9413c905: Removed unnecessary button role on collapsible button
+- 042fb9e8c: Added `@babel/runtime` as a package dependency.
+- Updated dependencies [0f76d269a]
+- Updated dependencies [d43864f0e]
+- Updated dependencies [8969f876a]
+- Updated dependencies [43fa70f0f]
+- Updated dependencies [272c39925]
+- Updated dependencies [89372aa9d]
+- Updated dependencies [27b6ef36b]
+- Updated dependencies [db54c495b]
+- Updated dependencies [46eea44f4]
+- Updated dependencies [c9413c905]
+- Updated dependencies [042fb9e8c]
+  - @ag.ds-next/box@6.1.0
+  - @ag.ds-next/core@3.0.1
+  - @ag.ds-next/icon@10.0.0
+  - @ag.ds-next/button@10.0.0
+
 ## 11.0.0
 
 ### Patch Changes

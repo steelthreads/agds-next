@@ -1,6 +1,6 @@
 {
 	"name": "@ag.ds-next/inpage-nav",
-	"version": "7.0.0",
+	"version": "8.0.0",
 	"main": "dist/ag.ds-next-inpage-nav.cjs.js",
 	"module": "dist/ag.ds-next-inpage-nav.esm.js",
 	"license": "MIT",
@@ -8,10 +8,10 @@
 		"@babel/runtime": "^7.4.5"
 	},
 	"peerDependencies": {
-		"@ag.ds-next/box": "6.0.0",
-		"@ag.ds-next/core": "3.0.0",
-		"@ag.ds-next/text": "8.0.0",
-		"@ag.ds-next/text-link": "4.0.0",
+		"@ag.ds-next/box": "6.1.0",
+		"@ag.ds-next/core": "3.0.1",
+		"@ag.ds-next/text": "9.0.0",
+		"@ag.ds-next/text-link": "5.0.0",
 		"@emotion/react": "^11.7.0",
 		"react": "^16.14.0 || ^17.0.0 || ^18.0.0"
 	},

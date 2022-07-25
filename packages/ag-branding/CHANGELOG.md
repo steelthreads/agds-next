@@ -1,5 +1,17 @@
 # @ag.ds-next/ag-branding
 
+## 6.1.1
+
+### Patch Changes
+
+- 697615cd6: New error colour token
+- eb79bfb77: Update documentation
+- 042fb9e8c: Added `@babel/runtime` as a package dependency.
+- Updated dependencies [d43864f0e]
+- Updated dependencies [27b6ef36b]
+- Updated dependencies [042fb9e8c]
+  - @ag.ds-next/core@3.0.1
+
 ## 6.1.0
 
 ### Minor Changes

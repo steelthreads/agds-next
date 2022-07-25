@@ -1,6 +1,6 @@
 {
 	"name": "@ag.ds-next/file-upload",
-	"version": "4.0.0",
+	"version": "5.0.0",
 	"main": "dist/ag.ds-next-file-upload.cjs.js",
 	"module": "dist/ag.ds-next-file-upload.esm.js",
 	"license": "MIT",
@@ -10,13 +10,13 @@
 		"react-dropzone": "^12.0.5"
 	},
 	"peerDependencies": {
-		"@ag.ds-next/box": "6.0.0",
-		"@ag.ds-next/button": "9.1.0",
-		"@ag.ds-next/core": "3.0.0",
-		"@ag.ds-next/field": "8.0.0",
-		"@ag.ds-next/icon": "9.0.0",
-		"@ag.ds-next/loading": "4.0.0",
-		"@ag.ds-next/text": "8.0.0",
+		"@ag.ds-next/box": "6.1.0",
+		"@ag.ds-next/button": "10.0.0",
+		"@ag.ds-next/core": "3.0.1",
+		"@ag.ds-next/field": "9.0.0",
+		"@ag.ds-next/icon": "10.0.0",
+		"@ag.ds-next/loading": "5.0.0",
+		"@ag.ds-next/text": "9.0.0",
 		"@emotion/react": "^11.7.0",
 		"react": "^16.14.0 || ^17.0.0 || ^18.0.0"
 	},

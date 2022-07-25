@@ -1,5 +1,24 @@
 # @ag.ds-next/skip-link
 
+## 8.0.0
+
+### Patch Changes
+
+- 34ded166e: - Updated documentation
+  - Narrowed down types
+- 042fb9e8c: Added `@babel/runtime` as a package dependency.
+- Updated dependencies [d43864f0e]
+- Updated dependencies [272c39925]
+- Updated dependencies [89372aa9d]
+- Updated dependencies [27b6ef36b]
+- Updated dependencies [db54c495b]
+- Updated dependencies [d354c5c36]
+- Updated dependencies [c9413c905]
+- Updated dependencies [042fb9e8c]
+  - @ag.ds-next/core@3.0.1
+  - @ag.ds-next/button@10.0.0
+  - @ag.ds-next/a11y@1.2.1
+
 ## 7.0.0
 
 ### Patch Changes
