@@ -1,7 +1,7 @@
 import { normalize } from 'path';
 import { MDXRemote } from 'next-mdx-remote';
-import { Body } from '@ag.ds-next/body';
 import { Card, CardInner, CardLink } from '@ag.ds-next/card';
+import { Prose } from '@ag.ds-next/prose';
 import { Stack } from '@ag.ds-next/box';
 import { Heading } from '@ag.ds-next/heading';
 import { Text } from '@ag.ds-next/text';
@@ -30,9 +30,9 @@ export default function ReleasesHome({ source, releaseLinks }: StaticProps) {
 					}}
 					editPath="/releases/index.mdx"
 				>
-					<Body>
+					<Prose>
 						<MDXRemote {...source} components={mdxComponents} />
-					</Body>
+					</Prose>
 					<Stack as="ul" gap={1.5}>
 						{releaseLinks.map(({ href, label, description }) => (
 							<Card as="li" key={label} clickable shadow>

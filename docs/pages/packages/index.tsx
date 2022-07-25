@@ -1,7 +1,7 @@
 import { normalize } from 'path';
 import { MDXRemote } from 'next-mdx-remote';
 import { Stack } from '@ag.ds-next/box';
-import { Body } from '@ag.ds-next/body';
+import { Prose } from '@ag.ds-next/prose';
 import { H2 } from '@ag.ds-next/heading';
 import { TextLink } from '@ag.ds-next/text-link';
 import { getMarkdownData, serializeMarkdown } from '../../lib/mdxUtils';
@@ -36,9 +36,9 @@ export default function PackagesHome({
 					}}
 					editPath="/packages/README.md"
 				>
-					<Body>
+					<Prose>
 						<MDXRemote {...source} components={mdxComponents} />
-					</Body>
+					</Prose>
 					<Stack gap={2}>
 						{groupList.map((group) => (
 							<Stack gap={1} key={group.slug}>

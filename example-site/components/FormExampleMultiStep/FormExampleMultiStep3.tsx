@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { Body } from '@ag.ds-next/body';
+import { Prose } from '@ag.ds-next/prose';
 import { Box, Stack } from '@ag.ds-next/box';
 import { Checkbox, ControlGroup } from '@ag.ds-next/control-input';
 import { FormStack } from '@ag.ds-next/form-stack';
@@ -97,7 +97,7 @@ export const FormExampleMultiStep3 = () => {
 							title="There is a problem"
 							tabIndex={-1}
 						>
-							<Body>
+							<Prose>
 								<p>Please correct the following fields and try again</p>
 								<ul>
 									{Object.entries(errors).map(([key, value]) => (
@@ -110,7 +110,7 @@ export const FormExampleMultiStep3 = () => {
 										</li>
 									))}
 								</ul>
-							</Body>
+							</Prose>
 						</PageAlert>
 					)}
 					<ControlGroup

@@ -6,22 +6,22 @@ const snippets = [
     <MainNav links={[{ label: "Hello", href: "#" }]} variant='agriculture' />
 
     <PageContent as="main">
-      <Body>
+      <Prose>
         <h1>Page heading</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at arcu eleifend, varius enim non, eleifend nibh. Quisque ac lacinia elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer scelerisque at ligula tempor eleifend. Vestibulum volutpat, dolor eu rutrum consequat, libero justo lacinia tortor, id varius tortor ante sit amet nisl. Aenean at dui diam. Cras a ligula a ante aliquam lacinia. Ut dolor quam, gravida eu dui quis, molestie lacinia dolor. Fusce lacus mi, pharetra molestie tortor eu, finibus lacinia libero.</p>
         <p>Suspendisse feugiat rhoncus magna eleifend aliquam. Morbi euismod ex convallis viverra eleifend. Nullam vel finibus libero. Maecenas leo sem, consectetur sit amet ipsum vel, commodo porttitor quam. Nullam libero nulla, cursus a turpis et, ullamcorper lobortis metus. Aliquam aliquam sodales malesuada. Phasellus sit amet libero ut nulla porta ornare. In elit lectus, iaculis et volutpat eget, tempor ornare eros. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse sodales metus quis vulputate convallis. Morbi congue lectus eget massa finibus luctus. Pellentesque tempus dui vel auctor ullamcorper.</p>
-      </Body>
+      </Prose>
     </PageContent>
     `,
 	},
 	{
 		group: 'Body',
 		name: 'Basic',
-		code: `<Body>
+		code: `<Prose>
     <h1>Page heading</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at arcu eleifend, varius enim non, eleifend nibh. Quisque ac lacinia elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer scelerisque at ligula tempor eleifend. Vestibulum volutpat, dolor eu rutrum consequat, libero justo lacinia tortor, id varius tortor ante sit amet nisl. Aenean at dui diam. Cras a ligula a ante aliquam lacinia. Ut dolor quam, gravida eu dui quis, molestie lacinia dolor. Fusce lacus mi, pharetra molestie tortor eu, finibus lacinia libero.</p>
     <p>Suspendisse feugiat rhoncus magna eleifend aliquam. Morbi euismod ex convallis viverra eleifend. Nullam vel finibus libero. Maecenas leo sem, consectetur sit amet ipsum vel, commodo porttitor quam. Nullam libero nulla, cursus a turpis et, ullamcorper lobortis metus. Aliquam aliquam sodales malesuada. Phasellus sit amet libero ut nulla porta ornare. In elit lectus, iaculis et volutpat eget, tempor ornare eros. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse sodales metus quis vulputate convallis. Morbi congue lectus eget massa finibus luctus. Pellentesque tempus dui vel auctor ullamcorper.</p>
-  </Body>
+  </Prose>
     `,
 	},
 	{
@@ -416,34 +416,34 @@ items={[
 		group: 'PageAlert',
 		name: 'Info',
 		code: `<PageAlert tone="info" title="Notice">
-      <Body><p>All vacancies close on the advertised closing date unless otherwise specified.</p></Body>
+      <Prose><p>All vacancies close on the advertised closing date unless otherwise specified.</p></Prose>
     </PageAlert>`,
 	},
 	{
 		group: 'PageAlert',
 		name: 'Success',
 		code: `<PageAlert tone="success" title="Submission successful">
-      <Body><p>Your application has been successfully submitted.</p></Body>
+      <Prose><p>Your application has been successfully submitted.</p></Prose>
     </PageAlert>`,
 	},
 	{
 		group: 'PageAlert',
 		name: 'Error',
 		code: `<PageAlert tone="error" title="There is a problem">
-      <Body>
+      <Prose>
         <ul>
           <li><a href="#">Full name must not be empty</a></li>
           <li><a href="#">Email must not be empty</a></li>
           <li><a href="#">Description must not be empty</a></li>
         </ul>
-      </Body>
+      </Prose>
     </PageAlert>`,
 	},
 	{
 		group: 'PageAlert',
 		name: 'Warning',
 		code: `<PageAlert tone="warning" title="Browser out of date">
-      <Body><p>Your web browser is out of date.</p></Body>
+      <Prose><p>Your web browser is out of date.</p></Prose>
     </PageAlert>`,
 	},
 	{

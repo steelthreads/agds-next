@@ -1,8 +1,8 @@
 {
-	"name": "@ag.ds-next/body",
+	"name": "@ag.ds-next/prose",
 	"version": "7.0.0",
-	"main": "dist/ag.ds-next-body.cjs.js",
-	"module": "dist/ag.ds-next-body.esm.js",
+	"main": "dist/ag.ds-next-prose.cjs.js",
+	"module": "dist/ag.ds-next-prose.esm.js",
 	"license": "MIT",
 	"dependencies": {
 		"@babel/runtime": "^7.4.5"

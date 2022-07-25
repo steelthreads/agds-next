@@ -1,6 +1,6 @@
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { MDXRemote } from 'next-mdx-remote';
-import { Body } from '@ag.ds-next/body';
+import { Prose } from '@ag.ds-next/prose';
 import {
 	getGuide,
 	getGuideList,
@@ -33,9 +33,9 @@ export default function Guides({
 					breadcrumbs={breadcrumbs}
 				>
 					<PageTitle title={guide.title} introduction={guide.description} />
-					<Body>
+					<Prose>
 						<MDXRemote {...guide.source} components={mdxComponents} />
-					</Body>
+					</Prose>
 				</PageLayout>
 			</AppLayout>
 		</>

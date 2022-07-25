@@ -10,7 +10,7 @@ export {
 	NotificationBadge,
 	IndicatorDot,
 } from '@ag.ds-next/badge';
-export { Body } from '@ag.ds-next/body';
+export { Prose } from '@ag.ds-next/prose';
 export { Box, Flex, Stack } from '@ag.ds-next/box';
 export {
 	BaseButton,

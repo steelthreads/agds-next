@@ -9,7 +9,7 @@ import {
 } from '@ag.ds-next/core';
 import { Box, BoxProps, linkStyles, focusStyles } from '@ag.ds-next/box';
 
-export const Body = forwardRefWithAs<'div', BoxProps>(function Body(
+export const Prose = forwardRefWithAs<'div', BoxProps>(function Body(
 	props,
 	ref
 ) {

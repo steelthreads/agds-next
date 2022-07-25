@@ -7,7 +7,7 @@ import { FormStack } from '@ag.ds-next/form-stack';
 import { TextInput } from '@ag.ds-next/text-input';
 import { Stack } from '@ag.ds-next/box';
 import { PageAlert } from '@ag.ds-next/page-alert';
-import { Body } from '@ag.ds-next/body';
+import { Prose } from '@ag.ds-next/prose';
 import { useScrollToField } from '@ag.ds-next/field';
 import { TextLink } from '@ag.ds-next/text-link';
 
@@ -72,9 +72,9 @@ export const FormExampleSignIn = () => {
 		<Stack gap={3}>
 			{hasNetworkErrors && (
 				<PageAlert ref={networkErrorPageAlertRef} tabIndex={-1} tone="error">
-					<Body>
+					<Prose>
 						<p>{networkErrorMessage}</p>
-					</Body>
+					</Prose>
 				</PageAlert>
 			)}
 			{hasClientErrors && (
@@ -84,7 +84,7 @@ export const FormExampleSignIn = () => {
 					tone="error"
 					title="There is a problem"
 				>
-					<Body>
+					<Prose>
 						<p>Please correct the following fields and try again</p>
 						<ul>
 							{Object.entries(errors).map(([key, value]) => (
@@ -95,7 +95,7 @@ export const FormExampleSignIn = () => {
 								</li>
 							))}
 						</ul>
-					</Body>
+					</Prose>
 				</PageAlert>
 			)}
 			<form onSubmit={handleSubmit(onSubmit, onError)} noValidate>

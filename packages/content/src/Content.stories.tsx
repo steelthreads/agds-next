@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Body } from '@ag.ds-next/body';
+import { Prose } from '@ag.ds-next/prose';
 import { Content } from './Content';
 
 export default {
@@ -9,7 +9,7 @@ export default {
 
 export const Basic: ComponentStory<typeof Content> = (args) => (
 	<Content {...args}>
-		<Body>
+		<Prose>
 			<h2>Content heading</h2>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at
@@ -22,7 +22,7 @@ export const Basic: ComponentStory<typeof Content> = (args) => (
 				lacinia dolor. Fusce lacus mi, pharetra molestie tortor eu, finibus
 				lacinia libero.
 			</p>
-		</Body>
+		</Prose>
 	</Content>
 );
 Basic.args = {

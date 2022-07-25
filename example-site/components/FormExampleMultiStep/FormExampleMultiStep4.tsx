@@ -3,7 +3,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { FormStack } from '@ag.ds-next/form-stack';
 import { VisuallyHidden } from '@ag.ds-next/a11y';
-import { Body } from '@ag.ds-next/body';
+import { Prose } from '@ag.ds-next/prose';
 import { Stack } from '@ag.ds-next/box';
 import { Checkbox, ControlGroup } from '@ag.ds-next/control-input';
 import { H2 } from '@ag.ds-next/heading';
@@ -141,7 +141,7 @@ export const FormExampleMultiStep4 = () => {
 			{/** Declaration form */}
 			<Stack as="form" gap={3} onSubmit={handleSubmit(onSubmit)} noValidate>
 				<FormStack>
-					<Body>
+					<Prose>
 						<h2>Declaration</h2>
 						<p>I declare that:</p>
 						<ul>
@@ -151,7 +151,7 @@ export const FormExampleMultiStep4 = () => {
 							</li>
 							<li>I have read and understood the terms and conditions</li>
 						</ul>
-					</Body>
+					</Prose>
 					<ControlGroup
 						label="Declaration agreement"
 						invalid={Boolean(errors.declaration?.message)}

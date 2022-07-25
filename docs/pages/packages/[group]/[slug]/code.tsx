@@ -1,6 +1,6 @@
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { MDXRemote } from 'next-mdx-remote';
-import { Body } from '@ag.ds-next/body';
+import { Prose } from '@ag.ds-next/prose';
 import {
 	getPkgList,
 	getPkg,
@@ -36,21 +36,19 @@ export default function PackagesCode({
 					]}
 					editPath={`/packages/${pkg.slug}/docs/code.mdx`}
 				>
-					<Body>
-						<Body id="pkg-content">
-							<h2>Source</h2>
-							<p>
-								You can view the full source code for this package on{' '}
-								<a
-									href={`https://github.com/steelthreads/agds-next/tree/main/packages/${pkg.slug}`}
-								>
-									Github
-								</a>
-								.
-							</p>
-							<MDXRemote {...content} components={mdxComponents} />
-						</Body>
-					</Body>
+					<Prose id="pkg-content">
+						<h2>Source</h2>
+						<p>
+							You can view the full source code for this package on{' '}
+							<a
+								href={`https://github.com/steelthreads/agds-next/tree/main/packages/${pkg.slug}`}
+							>
+								Github
+							</a>
+							.
+						</p>
+						<MDXRemote {...content} components={mdxComponents} />
+					</Prose>
 				</PkgLayout>
 			</AppLayout>
 		</>

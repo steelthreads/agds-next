@@ -1,6 +1,6 @@
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { MDXRemote } from 'next-mdx-remote';
-import { Body } from '@ag.ds-next/body';
+import { Prose } from '@ag.ds-next/prose';
 import { TemplateLayout } from '../../../components/TemplateLayout';
 import {
 	getTemplate,
@@ -37,9 +37,9 @@ export default function TemplateContentPage({
 					},
 				]}
 			>
-				<Body id="page-content">
+				<Prose id="page-content">
 					<MDXRemote {...content} components={mdxComponents} />
-				</Body>
+				</Prose>
 			</TemplateLayout>
 		</>
 	);

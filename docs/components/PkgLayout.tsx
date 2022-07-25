@@ -1,7 +1,7 @@
 import { PropsWithChildren } from 'react';
 import { useRouter } from 'next/router';
 import { CallToActionLink } from '@ag.ds-next/call-to-action';
-import { Body } from '@ag.ds-next/body';
+import { Prose } from '@ag.ds-next/prose';
 import { SkipLinksProps } from '@ag.ds-next/skip-link';
 import { SubNav } from '@ag.ds-next/sub-nav';
 import { Text } from '@ag.ds-next/text';
@@ -56,13 +56,13 @@ export function PkgLayout({
 					<Text as="p">This package is yet to be released on npm.</Text>
 				</PageAlert>
 			) : (
-				<Body>
+				<Prose>
 					<pre>
 						<code>
 							yarn add {pkg.name}@{pkg.version}
 						</code>
 					</pre>
-				</Body>
+				</Prose>
 			)}
 			{pkg.subNavItems?.length ? (
 				<SubNav

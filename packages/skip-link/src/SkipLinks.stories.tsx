@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import { ComponentMeta } from '@storybook/react';
-import { Body } from '@ag.ds-next/body';
+import { Prose } from '@ag.ds-next/prose';
 import { Stack } from '@ag.ds-next/box';
 import { SkipLinkItem } from './SkipLinkItem';
 import { SkipLinks } from './SkipLinks';
@@ -35,7 +35,7 @@ export const Modular = () => (
 );
 
 const ExampleContent = () => (
-	<Body>
+	<Prose>
 		<Stack gap={4}>
 			<p>This example space contains a visually hidden feature.</p>
 			<nav id="main-nav">
@@ -49,5 +49,5 @@ const ExampleContent = () => (
 				Some content here with <a href="#">an example link</a>
 			</main>
 		</Stack>
-	</Body>
+	</Prose>
 );
