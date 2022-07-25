@@ -30,6 +30,7 @@ export const StatusBadge = ({ label, tone }: StatusBadgeProps) => {
 			border
 			css={{
 				overflow: 'hidden',
+				flexShrink: 0,
 				borderRadius,
 				borderColor,
 				'& svg': {

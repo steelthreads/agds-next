@@ -1,5 +1,15 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Flex, Stack } from '@ag.ds-next/box';
+import {
+	Table,
+	TableBody,
+	TableCaption,
+	TableCell,
+	TableHead,
+	TableHeader,
+	TableWrapper,
+} from '@ag.ds-next/table';
+import { TextLink } from '@ag.ds-next/text-link';
 import { StatusBadge } from './StatusBadge';
 
 export default {
@@ -52,5 +62,75 @@ export const LanguageExamples = () => {
 				<StatusBadge tone="neutral" label="Draft" />
 			</Stack>
 		</Flex>
+	);
+};
+
+export const InTable = () => {
+	const data = [
+		{
+			id: 'RE4321–2201–03',
+			businessName: 'Orange Meat Works',
+			type: 'Record keeping—Minor',
+			status: 'Pending',
+		},
+		{
+			id: 'RE4321–2201–02',
+			businessName: 'Orange Meat Works',
+			type: 'Hygiene—Major',
+			status: 'Open',
+		},
+		{
+			id: 'RE4321–2201–01',
+			businessName: 'Molong Meat Works',
+			type: 'Record keeping—Minor',
+			status: 'Open',
+		},
+		{
+			id: 'RE4321–2201–00',
+			businessName: 'Orange Meat Works',
+			type: 'Record keeping—Minor',
+			status: 'Closed',
+		},
+	] as const;
+
+	const toneMapper = {
+		Closed: 'success',
+		Open: 'warning',
+		Pending: 'info',
+		Draft: 'neutral',
+	} as const;
+
+	return (
+		<TableWrapper>
+			<Table>
+				<TableCaption>Corrective action requests (CAR)</TableCaption>
+				<TableHead>
+					<tr>
+						<TableHeader>CAR number</TableHeader>
+						<TableHeader>Establishment name</TableHeader>
+						<TableHeader>Activity and severity</TableHeader>
+						<TableHeader>Status</TableHeader>
+						<TableHeader>Actions</TableHeader>
+					</tr>
+				</TableHead>
+				<TableBody>
+					{data.map(({ id, businessName, status, type }) => (
+						<tr key={id}>
+							<TableCell>{id}</TableCell>
+							<TableCell>{businessName}</TableCell>
+							<TableCell>{type}</TableCell>
+							<TableCell>
+								<StatusBadge tone={toneMapper[status]} label={status} />
+							</TableCell>
+							<TableCell>
+								<TextLink href={`#${id}`}>
+									{status == 'Closed' ? 'View' : 'Manage'}
+								</TextLink>
+							</TableCell>
+						</tr>
+					))}
+				</TableBody>
+			</Table>
+		</TableWrapper>
 	);
 };
