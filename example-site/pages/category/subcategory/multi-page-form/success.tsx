@@ -1,4 +1,4 @@
-import { Body } from '@ag.ds-next/body';
+import { Prose } from '@ag.ds-next/prose';
 import { Stack } from '@ag.ds-next/box';
 import { Breadcrumbs } from '@ag.ds-next/breadcrumbs';
 import { Column, Columns } from '@ag.ds-next/columns';
@@ -37,20 +37,20 @@ export default function FormMultiPageFormPage() {
 								<PageAlertTitle as="h2">
 									Descriptive success message (H2)
 								</PageAlertTitle>
-								<Body>
+								<Prose>
 									<p>Supporting paragraph for the success message</p>
 									<p>
 										<strong>Reference: 00000000</strong>
 									</p>
-								</Body>
+								</Prose>
 							</PageAlert>
-							<Body>
+							<Prose>
 								<h2>What happens next? (H2)</h2>
 								<p>
 									Short paragraph to describe what a user can anticipate next.
 									Use a short paragraph to reduce cognitive load.
 								</p>
-							</Body>
+							</Prose>
 							<FormHelpCallout />
 						</Stack>
 					</Column>

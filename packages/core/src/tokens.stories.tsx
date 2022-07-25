@@ -2,7 +2,7 @@ import { Box, Flex, Stack } from '@ag.ds-next/box';
 import { Text } from '@ag.ds-next/text';
 import { Card, CardInner } from '@ag.ds-next/card';
 import { H2 } from '@ag.ds-next/heading';
-import { Body } from '@ag.ds-next/body';
+import { Prose } from '@ag.ds-next/prose';
 import { Columns } from '@ag.ds-next/columns';
 import { boxPalette } from './boxPalette';
 import { mapSpacing, Spacing } from './tokens';
@@ -114,10 +114,10 @@ const BackgroundRow = ({ palette }: { palette: 'light' | 'dark' }) => (
 export const Backgrounds = () => {
 	return (
 		<>
-			<Body>
+			<Prose>
 				<h2>Backgrounds</h2>
 				<p>A visualisation of how body and shade backgrounds work together.</p>
-			</Body>
+			</Prose>
 			<BackgroundRow palette="light" />
 			<BackgroundRow palette="dark" />
 		</>

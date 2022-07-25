@@ -1,4 +1,4 @@
-import { Body } from '@ag.ds-next/body';
+import { Prose } from '@ag.ds-next/prose';
 import { PageContent, ContentBleed } from '@ag.ds-next/content';
 import { Columns, Column } from '@ag.ds-next/columns';
 import { SideNav } from '@ag.ds-next/side-nav';
@@ -68,7 +68,7 @@ export default function ContentPage() {
 										alignItems="flex-start"
 										gap={1.5}
 									>
-										<Body>
+										<Prose>
 											<h2>Content page section heading - xl/display (H2)</h2>
 											<p>
 												This is a standard paragraph - sm/default (P). This is a
@@ -78,12 +78,12 @@ export default function ContentPage() {
 												sm/default (P). This is a standard paragraph -
 												sm/default (P).
 											</p>
-										</Body>
+										</Prose>
 										{idx === 2 && (
 											<Accordion>
 												<AccordionItem title="Accordion 1">
 													<AccordionItemContent>
-														<Body>
+														<Prose>
 															<p>
 																This is a standard paragraph - sm/default (P).
 																This is a standard paragraph - sm/default (P).
@@ -92,12 +92,12 @@ export default function ContentPage() {
 																This is a standard paragraph - sm/default (P).
 																This is a standard paragraph - sm/default (P).
 															</p>
-														</Body>
+														</Prose>
 													</AccordionItemContent>
 												</AccordionItem>
 												<AccordionItem title="Accordion 2">
 													<AccordionItemContent>
-														<Body>
+														<Prose>
 															<p>
 																This is a standard paragraph - sm/default (P).
 																This is a standard paragraph - sm/default (P).
@@ -106,12 +106,12 @@ export default function ContentPage() {
 																This is a standard paragraph - sm/default (P).
 																This is a standard paragraph - sm/default (P).
 															</p>
-														</Body>
+														</Prose>
 													</AccordionItemContent>
 												</AccordionItem>
 												<AccordionItem title="Accordion 3">
 													<AccordionItemContent>
-														<Body>
+														<Prose>
 															<p>
 																This is a standard paragraph - sm/default (P).
 																This is a standard paragraph - sm/default (P).
@@ -120,7 +120,7 @@ export default function ContentPage() {
 																This is a standard paragraph - sm/default (P).
 																This is a standard paragraph - sm/default (P).
 															</p>
-														</Body>
+														</Prose>
 													</AccordionItemContent>
 												</AccordionItem>
 											</Accordion>

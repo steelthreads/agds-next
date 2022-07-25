@@ -20,7 +20,10 @@ import {
 	useToggleState,
 } from '@ag.ds-next/core';
 import { Box, Flex } from '@ag.ds-next/box';
-import { unsetBodyStylesClassname, bodyBlockClassname } from '@ag.ds-next/body';
+import {
+	unsetBodyStylesClassname,
+	bodyBlockClassname,
+} from '@ag.ds-next/prose';
 import { Button, ButtonLink } from '@ag.ds-next/button';
 import { CopyIcon, ChevronDownIcon, ChevronUpIcon } from '@ag.ds-next/icon';
 import * as designSystemComponents from './designSystemComponents';

@@ -5,7 +5,7 @@ import { Header } from '@ag.ds-next/header';
 import { Logo } from '@ag.ds-next/ag-branding/';
 import { MainNav } from '@ag.ds-next/main-nav';
 import { Content } from '@ag.ds-next/content';
-import { Body } from '@ag.ds-next/body';
+import { Prose } from '@ag.ds-next/prose';
 import {
 	LoadingBlanket,
 	LoadingBlanketProps,
@@ -45,7 +45,7 @@ const FullScreenContent = () => (
 		<Header logo={<Logo />} heading="Export Service" />
 		<MainNav links={[{ label: 'Hello', href: '#' }]} variant="agriculture" />
 		<Content>
-			<Body>
+			<Prose>
 				<h1>Page heading</h1>
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
@@ -93,7 +93,7 @@ const FullScreenContent = () => (
 					lectus eget massa finibus luctus. Pellentesque tempus dui vel auctor
 					ullamcorper.
 				</p>
-			</Body>
+			</Prose>
 		</Content>
 	</Fragment>
 );

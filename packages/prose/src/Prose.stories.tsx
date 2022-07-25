@@ -1,11 +1,11 @@
 import { Fragment } from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Body as BodyComponent } from './index';
+import { Prose } from './index';
 
 export default {
 	title: 'content/Body',
-	component: BodyComponent,
-} as ComponentMeta<typeof BodyComponent>;
+	component: Prose,
+} as ComponentMeta<typeof Prose>;
 
 const UnstyledContent = () => (
 	<Fragment>
@@ -225,8 +225,8 @@ const UnstyledContent = () => (
 	</Fragment>
 );
 
-export const Body: ComponentStory<typeof BodyComponent> = (args) => (
-	<BodyComponent {...args}>
+export const Basic: ComponentStory<typeof Prose> = (args) => (
+	<Prose {...args}>
 		<UnstyledContent />
-	</BodyComponent>
+	</Prose>
 );

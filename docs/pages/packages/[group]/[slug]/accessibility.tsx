@@ -1,6 +1,6 @@
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { MDXRemote } from 'next-mdx-remote';
-import { Body } from '@ag.ds-next/body';
+import { Prose } from '@ag.ds-next/prose';
 import {
 	getPkgList,
 	getPkg,
@@ -36,11 +36,9 @@ export default function PackagesAccessibility({
 					]}
 					editPath={`/packages/${pkg.slug}/docs/accessibility.mdx`}
 				>
-					<Body>
-						<Body id="pkg-content">
-							<MDXRemote {...content} components={mdxComponents} />
-						</Body>
-					</Body>
+					<Prose id="pkg-content">
+						<MDXRemote {...content} components={mdxComponents} />
+					</Prose>
 				</PkgLayout>
 			</AppLayout>
 		</>

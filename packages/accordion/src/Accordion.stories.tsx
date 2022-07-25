@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { ComponentMeta } from '@storybook/react';
 import { Box, Stack } from '@ag.ds-next/box';
 import { useToggleState } from '@ag.ds-next/core';
-import { Body } from '@ag.ds-next/body';
+import { Prose } from '@ag.ds-next/prose';
 import { Button } from '@ag.ds-next/button';
 import { Text } from '@ag.ds-next/text';
 import { Accordion } from './Accordion';
@@ -43,7 +43,7 @@ const AccordionGroupExample = ({ background }: AccordionExampleProps) => (
 			</AccordionItem>
 			<AccordionItem title="Accordion 2" background={background}>
 				<AccordionItemContent>
-					<Body>
+					<Prose>
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a
 							libero vel dolor sollicitudin pretium quis quis mi. Fusce sapien
@@ -72,7 +72,7 @@ const AccordionGroupExample = ({ background }: AccordionExampleProps) => (
 							id mattis. Sed dictum tempus nibh, quis feugiat magna efficitur
 							in. Sed vulputate et dui eu malesuada.
 						</p>
-					</Body>
+					</Prose>
 				</AccordionItemContent>
 			</AccordionItem>
 			<AccordionItem title="Accordion 3" background={background}>
@@ -104,7 +104,7 @@ export const Controlled = () => {
 					title="Controlled Accordion"
 				>
 					<AccordionItemContent>
-						<Body>
+						<Prose>
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a
 								libero vel dolor sollicitudin pretium quis quis mi. Fusce sapien
@@ -121,7 +121,7 @@ export const Controlled = () => {
 								elit bibendum, nec bibendum ligula posuere. Nam porttitor est
 								eros, ac maximus nisl euismod nec.
 							</p>
-						</Body>
+						</Prose>
 					</AccordionItemContent>
 				</AccordionItem>
 			</Accordion>
@@ -156,7 +156,7 @@ const AccordionControlledGroupExample = ({
 				onToggle={() => toggle(2)}
 			>
 				<AccordionItemContent>
-					<Body>
+					<Prose>
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a
 							libero vel dolor sollicitudin pretium quis quis mi. Fusce sapien
@@ -185,7 +185,7 @@ const AccordionControlledGroupExample = ({
 							id mattis. Sed dictum tempus nibh, quis feugiat magna efficitur
 							in. Sed vulputate et dui eu malesuada.
 						</p>
-					</Body>
+					</Prose>
 				</AccordionItemContent>
 			</AccordionItem>
 			<AccordionItem

@@ -5,7 +5,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { Button, ButtonGroup } from '@ag.ds-next/button';
 import { Checkbox } from '@ag.ds-next/control-input';
-import { Body } from '@ag.ds-next/body';
+import { Prose } from '@ag.ds-next/prose';
 import { Stack } from '@ag.ds-next/box';
 import { Fieldset } from '@ag.ds-next/fieldset';
 import { FormStack } from '@ag.ds-next/form-stack';
@@ -115,7 +115,7 @@ export const FormExampleSinglePage = () => {
 						tone="error"
 						title="There is a problem"
 					>
-						<Body>
+						<Prose>
 							<p>Please correct the following fields and try again</p>
 							<ul>
 								{Object.entries(errors).map(([key, value]) => (
@@ -126,7 +126,7 @@ export const FormExampleSinglePage = () => {
 									</li>
 								))}
 							</ul>
-						</Body>
+						</Prose>
 					</PageAlert>
 				)}
 				<Fieldset

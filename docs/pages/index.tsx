@@ -2,7 +2,7 @@ import { Columns, Column } from '@ag.ds-next/columns';
 import { SectionContent } from '@ag.ds-next/content';
 import { Stack } from '@ag.ds-next/box';
 import { CallToActionLink } from '@ag.ds-next/call-to-action';
-import { Body } from '@ag.ds-next/body';
+import { Prose } from '@ag.ds-next/prose';
 import { TextLink } from '@ag.ds-next/text-link';
 import {
 	HeroBanner,
@@ -36,7 +36,7 @@ export default function Homepage() {
 				</HeroBanner>
 				<SectionContent>
 					<Stack gap={3}>
-						<Body>
+						<Prose>
 							<p>
 								AgDS is based on the{' '}
 								<TextLink href="https://gold.designsystemau.org/">
@@ -56,7 +56,7 @@ export default function Homepage() {
 								do not depend on these components just yet. We&apos;re working
 								hard to get a stable release out as soon as we can.
 							</p>
-						</Body>
+						</Prose>
 						<Columns gap={1} as="ul">
 							<Column
 								as="li"

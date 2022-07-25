@@ -1,6 +1,6 @@
 import { Stack } from '@ag.ds-next/box';
 import { PageContent } from '@ag.ds-next/content';
-import { Body } from '@ag.ds-next/body';
+import { Prose } from '@ag.ds-next/prose';
 import { Columns, Column } from '@ag.ds-next/columns';
 import { AppLayout } from '../components/AppLayout';
 import { DocumentTitle } from '../components/DocumentTitle';
@@ -23,14 +23,14 @@ export default function SignInFormPage() {
 								/>
 								<FormExampleSignIn />
 								<FormDivider />
-								<Body>
+								<Prose>
 									<p>
 										Don&apos;t have an account? <a href="#">Create account</a>
 									</p>
 									<p>
 										Read our <a href="#">privacy policy</a>
 									</p>
-								</Body>
+								</Prose>
 							</Stack>
 						</Column>
 					</Columns>

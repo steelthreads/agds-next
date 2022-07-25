@@ -7,7 +7,7 @@ import {
 } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { Body } from '@ag.ds-next/body';
+import { Prose } from '@ag.ds-next/prose';
 import { FileUpload } from '@ag.ds-next/file-upload';
 import { FormStack } from '@ag.ds-next/form-stack';
 import { LoadingBlanket } from '@ag.ds-next/loading';
@@ -82,7 +82,7 @@ export const FormExampleMultiStep1 = () => {
 							title="There is a problem"
 							tabIndex={-1}
 						>
-							<Body>
+							<Prose>
 								<p>Please correct the following fields and try again</p>
 								<ul>
 									{Object.entries(errors).map(([key, value]) => (
@@ -95,7 +95,7 @@ export const FormExampleMultiStep1 = () => {
 										</li>
 									))}
 								</ul>
-							</Body>
+							</Prose>
 						</PageAlert>
 					)}
 					<Textarea

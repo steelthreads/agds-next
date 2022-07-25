@@ -1,7 +1,7 @@
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { MDXRemote } from 'next-mdx-remote';
 import { H1 } from '@ag.ds-next/heading';
-import { Body } from '@ag.ds-next/body';
+import { Prose } from '@ag.ds-next/prose';
 import {
 	getRelease,
 	getReleaseBreadcrumbs,
@@ -33,9 +33,9 @@ export default function Releases({
 					breadcrumbs={breadcrumbs}
 				>
 					<H1>{release.data.title}</H1>
-					<Body>
+					<Prose>
 						<MDXRemote {...release.source} components={mdxComponents} />
-					</Body>
+					</Prose>
 				</PageLayout>
 			</AppLayout>
 		</>

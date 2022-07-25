@@ -1,6 +1,6 @@
 import { normalize } from 'path';
 import { MDXRemote } from 'next-mdx-remote';
-import { Body } from '@ag.ds-next/body';
+import { Prose } from '@ag.ds-next/prose';
 import { getMarkdownData, serializeMarkdown } from '../../lib/mdxUtils';
 import { getGuideList } from '../../lib/mdx/guides';
 import { mdxComponents } from '../../components/mdxComponents';
@@ -23,9 +23,9 @@ export default function GuidesHome({ source, guideLinks }: StaticProps) {
 					}}
 					editPath="/guides/index.mdx"
 				>
-					<Body>
+					<Prose>
 						<MDXRemote {...source} components={mdxComponents} />
-					</Body>
+					</Prose>
 				</PageLayout>
 			</AppLayout>
 		</>

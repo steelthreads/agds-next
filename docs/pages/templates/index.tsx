@@ -1,6 +1,6 @@
 import { normalize } from 'path';
 import { MDXRemote } from 'next-mdx-remote';
-import { Body } from '@ag.ds-next/body';
+import { Prose } from '@ag.ds-next/prose';
 import { boxPalette } from '@ag.ds-next/core';
 import { Box, Flex, Stack } from '@ag.ds-next/box';
 import { Card, CardLink, CardInner } from '@ag.ds-next/card';
@@ -29,9 +29,9 @@ export default function TemplatesPage({ source, templateLinks }: StaticProps) {
 					}}
 					editPath="/templates/index.mdx"
 				>
-					<Body>
+					<Prose>
 						<MDXRemote {...source} components={mdxComponents} />
-					</Body>
+					</Prose>
 					<Columns as="ul" gap={1.5} cols={{ xs: 1, sm: 2, lg: 3 }}>
 						{templateLinks.map((template) => {
 							return <TemplateCard key={template.slug} {...template} />;

@@ -5,7 +5,7 @@ group: Navigation
 storybookPath: /story/navigation-skiplinks--basic
 ---
 
-Skip links are not visual until they receive focus. Include skip links after the opening of the `<body>` tag.
+Skip links are not visual until they receive focus. Include skip links after the opening of the `<Prose>` tag.
 
 ```jsx
 <React.Fragment>

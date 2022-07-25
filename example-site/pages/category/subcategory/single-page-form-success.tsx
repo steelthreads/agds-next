@@ -3,7 +3,7 @@ import { Breadcrumbs } from '@ag.ds-next/breadcrumbs';
 import { PageContent } from '@ag.ds-next/content';
 import { Columns, Column } from '@ag.ds-next/columns';
 import { PageAlert, PageAlertTitle } from '@ag.ds-next/page-alert';
-import { Body } from '@ag.ds-next/body';
+import { Prose } from '@ag.ds-next/prose';
 import { AppLayout } from '../../../components/AppLayout';
 import { DocumentTitle } from '../../../components/DocumentTitle';
 import { PageTitle } from '../../../components/PageTitle';
@@ -36,20 +36,20 @@ export default function SinglePageFormSuccessPage() {
 									<PageAlertTitle as="h2">
 										Descriptive success message (H2)
 									</PageAlertTitle>
-									<Body>
+									<Prose>
 										<p>Supporting paragraph for the success message</p>
 										<p>
 											<strong>Reference: 00000000</strong>
 										</p>
-									</Body>
+									</Prose>
 								</PageAlert>
-								<Body>
+								<Prose>
 									<h2>What happens next? (H2)</h2>
 									<p>
 										Short paragraph to describe what a user can anticipate next.
 										Use a short paragraph to reduce cognitive load.
 									</p>
-								</Body>
+								</Prose>
 								<FormHelpCallout />
 							</Stack>
 						</Column>
